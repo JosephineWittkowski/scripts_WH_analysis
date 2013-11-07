@@ -133,7 +133,7 @@ if print_numbers_contributions:
 ybinProj_EE_SRSS1 = 27
 ybinProj_EE_SRSS2 = 38
 
-ybinProj_MM_SRSS1 = 27
+ybinProj_MM_SRSS1 = 30
 ybinProj_MM_SRSS2 = 45
 ybinProj_MM_SRSS3 = 46
 #ybinProj_MM_SRSS4 = 37
@@ -453,7 +453,7 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
       line_Z = ROOT.TLine(pos_line_Z_N_max ,0. , pos_line_Z_N_max, Z_N_max)
       line_Z.SetLineWidth(5)
       line_Z.SetLineColor(ROOT.kBlue)
-      #line_Z.Draw("same")
+      line_Z.Draw("same")
       
       #draw legend for upper plot:
       leg_ZN = ROOT.TLegend(0.45,0.6,0.9,0.99)
