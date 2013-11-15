@@ -61,28 +61,30 @@ import ROOT
   #histo = filenames_merged[r].Get("h_N_events_MM")
   #print "r= ", r, ", content= ", histo.Integral(0, 99999, 1, 1)
   
-Egammafile1 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Egamma_softLeptonCheck_1.root")
-Egammafile2 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Egamma_softLeptonCheck_2.root")
-Muonfile1 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Muons_softLeptonCheck_1.root")
-Muonfile2 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Muons_softLeptonCheck_2.root")
-#Muonfile3 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Muons_softLeptonCheck_3.root")
-#Muonfile4 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Muons_softLeptonCheck_4.root")
+Egammafile1 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Egamma_thirdLeptonCheck_DeltaR_1.root")
+Egammafile2 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Egamma_thirdLeptonCheck_DeltaR_2.root")
+Egammafile3 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Muons_thirdLeptonCheck_DeltaR_3.root")
+
+Muonfile1 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Muons_thirdLeptonCheck_DeltaR_1.root")
+Muonfile2 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Muons_thirdLeptonCheck_DeltaR_2.root")
+Muonfile3 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Muons_thirdLeptonCheck_DeltaR_3.root")
+
 
 fm = ROOT.TFileMerger(ROOT.kFALSE)
-fm.OutputFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_fakebg_softLeptonCheck.root")
+fm.OutputFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_fakebg_thirdLeptonCheck_DeltaR.root")
 fm.AddFile(Egammafile1)
 fm.AddFile(Egammafile2)
+fm.AddFile(Egammafile3)
 fm.AddFile(Muonfile1)
 fm.AddFile(Muonfile2)
-#fm.AddFile(Muonfile3)
-#fm.AddFile(Muonfile4)
+fm.AddFile(Muonfile3)
 fm.PartialMerge()  
 
 Egammafile1.Close()
 Egammafile2.Close()
+Egammafile3.Close()
 Muonfile1.Close()
 Muonfile2.Close()
-#Muonfile3.Close()
-#Muonfile4.Close()
+Muonfile3.Close()
   
 print "finished!"

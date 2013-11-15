@@ -2,7 +2,7 @@
 import ROOT
 #import "RooStats/NumberCountingUtils.h"
 
-ROOT.gROOT.ProcessLine("gROOT->SetBatch()")
+#ROOT.gROOT.ProcessLine("gROOT->SetBatch()")
 
 name_of_bg_file = [
 		    "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_ZPlusJets_thirdLeptonCheck_DeltaR.root", 
@@ -16,33 +16,33 @@ name_of_bg_file = [
 		    ]
 		
 name_of_signal_file = [
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177501_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177502_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177503_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177504_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177505_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177506_thirdLeptonCheck_DeltaR.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177507_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177508_thirdLeptonCheck_DeltaR.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177509_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177510_thirdLeptonCheck_DeltaR.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177511_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177512_thirdLeptonCheck_DeltaR.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177513_thirdLeptonCheck_DeltaR.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177514_thirdLeptonCheck_DeltaR.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177515_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177516_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177517_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177518_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177519_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177520_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177521_thirdLeptonCheck_DeltaR.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177522_thirdLeptonCheck_DeltaR.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177523_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177524_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177525_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177526_thirdLeptonCheck_DeltaR.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177527_thirdLeptonCheck_DeltaR.root"
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177501_thirdLeptonCheck_DeltaR.root"
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177502_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177503_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177504_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177505_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177506_thirdLeptonCheck_DeltaR.root", 
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177507_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177508_thirdLeptonCheck_DeltaR.root", 
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177509_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177510_thirdLeptonCheck_DeltaR.root", 
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177511_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177512_thirdLeptonCheck_DeltaR.root", 
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177513_thirdLeptonCheck_DeltaR.root", 
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177514_thirdLeptonCheck_DeltaR.root", 
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177515_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177516_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177517_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177518_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177519_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177520_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177521_thirdLeptonCheck_DeltaR.root", 
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177522_thirdLeptonCheck_DeltaR.root", 
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177523_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177524_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177525_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177526_thirdLeptonCheck_DeltaR.root",
+		       #"/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177527_thirdLeptonCheck_DeltaR.root"
 		       ]
 
 		  
@@ -52,18 +52,15 @@ name_of_contributionLegend = ["Z+Jets", "ttbarW+t", "WZ", "ZZ", "WW", "WW+Jets",
 fillColors = [ROOT.kOrange-2, ROOT.kRed+1, ROOT.kSpring+1, ROOT.kGreen+3, ROOT.kBlue-2, ROOT.kAzure+8, ROOT.kYellow, ROOT.kGray+1]
 name_of_contribution = ["ZPlusJets", "ttbarWPlust", "WZ", "ZZ", "WW", "WWPlusJets", "Higgs", "fake"]
 
-name_of_variables = ["ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft", "DeltaRl0lsoft", "DeltaRl1lsoft", "mTlllsoft", "ml0lprecar", "ml1lprecar", "mTl0lprecar", "mTl1lprecar", "DeltaRl0lprecar", "DeltaRl1lprecar", "mTlllprecar", "ml0loverlap", "ml1loverlap", "mTl0loverlap", "mTl1loverlap", "DeltaRl0loverlap", "DeltaRl1loverlap", "mTllloverlap", "ml0llost", "ml1llost", "mTl0llost", "mTl1llost", "DeltaRl0llost", "DeltaRl1llost", "mTllllost"]
-
-
-    
+name_of_variables = ["ml0l"]#, "ml1l", "mTl0l", "mTl1l", "DeltaRl0l", "DeltaRl1l", "mTlll"]
 #name_of_variables = ["pTl0", "pTl1", "pTj0", "pTj1", "mll", "METrel", "MET", "HT", "mWWt", "mTlmin", "meff", "mt2", "mjj", "DeltaPhiMETll", "DeltaPhill", "NBJets", "NFJets", "NCJets", "DeltaPhijj", "pTjj", "ptll", "DeltaPhiMETl0", "DeltaPhiMETl1", "DeltaPhiMETj0", "DeltaPhiMETj1", "DeltaPhiMETjj", "DeltaRjj", "etal0", "etal1", "etaj0", "etaj1", "mTl0MET", "mTl1MET", "DeltaPhilljj", "DeltaPhil0jj", "DeltaPhil1jj", "DeltaRlljj", "DeltaEtajj", "mTll", "mMETll", "DeltaYjj", "DeltaEtall"]#, "D0_recalc_l0", "D0_recalc_l1", "D0_branch_l0", "D0_branch_l1", "D0Signif_recalc_l0", "D0Signif_recalc_l1", "D0Signif_branch_l0", "D0Signif_branch_l1", "mZTT_coll", "mZTT_mmc", "ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft", "Mljj", "mTlmax"]
 
 #cut_list = [2, 50, 50, 80, 40, 50, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-x_axis_title = ["ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft", "DeltaRl0lsoft", "DeltaRl1lsoft", "mTlllsoft", "ml0lprecar", "ml1lprecar", "mTl0lprecar", "mTl1lprecar", "DeltaRl0lprecar", "DeltaRl1lprecar", "mTlllprecar", "ml0loverlap", "ml1loverlap", "mTl0loverlap", "mTl1loverlap", "DeltaRl0loverlap", "DeltaRl1loverlap", "mTllloverlap", "ml0llost", "ml1llost", "mTl0llost", "mTl1llost", "DeltaRl0llost", "DeltaRl1llost", "mTllllost"]
+x_axis_title = ["ml0l", "ml1l", "mTl0l", "mTl1l", "DeltaRl0l", "DeltaRl1l", "mTlll"]
 #x_axis_title = ["p_{Tl0}","p_{Tl1}","p_{Tj0}","p_{Tj1}", "m_{ll}", "E_{T}^{miss, rel}", "E_{T}^{miss}", "H_{T}", "m_{TWW}", "min(m_{T}(l0, l1))", "m_{eff}", "m_{T2}", "m_{jj}", "#Delta#Phi(E_{T}^{miss}, ll)", "#Delta#Phi(l0,l1)", "NBJets", "NFJets", "NCJets", "#Delta#Phi(j0, j1)", "p_{T,jj}", "p_{T,ll}", "#Delta#Phi(E_{T}^{miss},l0)", "#Delta#Phi(E_{T}^{miss},l1)", "#Delta#Phi(E_{T}^{miss},j0)", "#Delta#Phi(E_{T}^{miss},j1)", "#Delta#Phi(E_{T}^{miss},jj)", "#DeltaR(j,j)", "#eta_{l0}", "#eta_{l1}", "#eta_{j0}", "#eta_{j1}", "m_{T}(l0, E_{T}^{miss})", "m_{T}(l1, E_{T}^{miss})", "#Delta#Phi(ll,jj)", "#Delta#Phi(l0,jj)", "#Delta#Phi(l1,jj)", "#DeltaR(ll,jj)", "#Delta#ta(j,j)", "m_{T,ll}", "m_{E_{T}^{miss},ll}", "#DeltaY(j,j)", "#Delta#eta(l0,l1)"]#,"d0 recalc l0", "d0 recalc l1", "d0 branch l0", "d0 branch l1", "d0/#sigmad0 recalc l0", "d0/#sigmad0 recalc l1", "d0/#sigmad0 branch l0", "d0/#sigmad0 branch l1", "m_{Z->#tau#tau} (coll)","m_{Z->#tau#tau} (mmc)", "m_{l0lsoft}", "m_{l1lsoft}", "m_{Tl0lsoft}", "m_{Tl1lsoft}", "M_{ljj}", "max(m_{T}(l0, l1))"]
 
-name_of_SR = ["EM_SRSS1"]#, "EE_SRSS2"]#, "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4", "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
+name_of_SR = ["EE_SRSS1"]#, "EE_SRSS2"]#, "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4", "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
 #name_of_SR = ["EE_SRSS1", "EE_SRSS2", "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4", "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
 #mcid_of_grid_point = ["177502", "177504", "177508", "177513", "177523", "177525"]
 #mcid_of_grid_point = ["177508", "177513"]
@@ -167,7 +164,7 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
     for i_s, s in enumerate(name_of_SR):
       #histoname as defined in histos_ZN_tauveto.C
       histoname = "h_" + v + "_" + s
-      print "histoname ", histoname
+      #print "histoname ", histoname
       #define stack to add all bg samples:
       stack = ROOT.THStack("stack_" + v + "_" + s, "stack_" + v + "_" + s)
       #define corresponding leg_stack
@@ -177,10 +174,17 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
       #loop over TFiles for bg contributions:
       for i_rf, rf in enumerate(rootfiles_bg):	
 	#get individual histo for each bg root file:
-	bg_histo = rf.Get(histoname)
+
+	bg_histo = rf.Get("h_" + v +  "soft" + "_" + s)
 	bg_histo.Print()
+	bg_histo_overlap = rf.Get("h_" + v +  "overlap" + "_" + s)
+	bg_histo_precar = rf.Get("h_" + v +  "precar" + "_" + s)
+	bg_histo.Add(bg_histo_overlap)
+	bg_histo.Add(bg_histo_precar)
+	
 	#projection of TH2F:
 	bg_histo_projected = bg_histo.ProjectionX(histoname + "_1D_" + name_of_contribution[i_rf] + "_" + str(i_g), ybinProj_list[i_s], ybinProj_list[i_s])
+	print bg_histo_projected.GetBinContent(4)
 	
 	#depending on bins of histo, do rebin:
 	nbins = bg_histo.GetNbinsX()
@@ -246,9 +250,9 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
 	  pad1.SetLogy(1)
 	  pad1.SetFillColor(ROOT.kWhite)
 
-	  #pad2 = ROOT.TPad("pad2","pad2", 0.0, 0.85, 1.0, 1.0, 0, 0)
-	  #pad2.Draw()
-	  #pad2.SetFillColor(ROOT.kWhite)
+	  pad2 = ROOT.TPad("pad2","pad2", 0.0, 0.85, 1.0, 1.0, 0, 0)
+	  pad2.Draw()
+	  pad2.SetFillColor(ROOT.kWhite)
 	  
 	  #enter first TPad for stack plot:
 	  pad1.cd()
@@ -286,6 +290,13 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
 	  #for merged signal grid point: just draw histogram:	
 	  print histoname
 	  grid_point_file_histo = grid_point_file.Get(histoname)
+	  grid_point_file_histo = rf.Get("h_" + v +  "soft" + "_" + s)
+	  bg_histo.Print()
+	  grid_point_file_histo_overlap = rf.Get("h_" + v +  "overlap" + "_" + s)
+	  grid_point_file_histo_precar = rf.Get("h_" + v +  "precar" + "_" + s)
+	  #grid_point_file_histo.Add(grid_point_file_histo_overlap)
+	  #grid_point_file_histo.Add(grid_point_file_histo_precar)
+	
 	  #grid_point_file_histo.Print()
 	  grid_point_file_histo_projected = grid_point_file_histo.ProjectionX(histoname + "_1D_signal_" + name_of_contribution[i_rf], ybinProj_list[i_s], ybinProj_list[i_s])
 	  #print str(mcid_of_grid_point[i_g]), "      ", grid_point_file_histo_projected.Integral(0, nbins + 2)
@@ -334,7 +345,7 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
       leg_stack.SetTextSize(0.025)
       leg_stack.Draw("same")
       
-      #access second TPad for Z_N, cut efficiency plots:
+      ##access second TPad for Z_N, cut efficiency plots:
       #pad2.cd()
       #pad2.SetBottomMargin(0.0)
       #pad2.SetLeftMargin(0.2)
@@ -471,7 +482,7 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
       #leg_ZN.Draw("same")
 
       #pad2.cd().Update()
-      c1.SaveAs("/data/etp/jwittkowski/pics/cumulative_pdf_" + v + "_" + s + "_" + mcid_of_grid_point[i_g] + "_bin" + str(ybinProj_list[i_s]) + "_thirdLeptonCheck_DeltaR.pdf")
+      c1.SaveAs("/data/etp/jwittkowski/pics/cumulative_pdf_" + v + "added_" + s + "_" + mcid_of_grid_point[i_g] + "_bin" + str(ybinProj_list[i_s]) + "_thirdLeptonCheck_DeltaR.pdf")
     #end loop over signal regions
   #end loop over variables
 for rf in rootfiles_bg:
