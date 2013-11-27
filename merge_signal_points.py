@@ -10,7 +10,7 @@ import ROOT
 #for mcid in range(176574, 176641):
   #if mcid == 176585 or mcid == 176614:
     #continue
-  #filenames.append(ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_signal_" + str(mcid) + ".root"))
+  #filenames.append(ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_ZN_signal_" + str(mcid) + ".root"))
   #mcids.append(mcid)
   
 ##print filenames
@@ -20,7 +20,7 @@ import ROOT
   #filemergers = []
   #for r in range(0,7):
     #filemerger = ROOT.TFileMerger(ROOT.kFALSE)
-    #filemerger.OutputFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_signal_merged_" + str(r+1) + ".root")
+    #filemerger.OutputFile("/data/etp/jwittkowski/outputfiles/histos_ZN_signal_merged_" + str(r+1) + ".root")
     #filemergers.append(filemerger)
   
 #bincontent = [0., 0., 0., 0., 0., 0., 0.] 
@@ -56,22 +56,22 @@ import ROOT
 #filenames_merged = []
 #for r in range(0,7):
   #print "bincontent= ", bincontent[r]
-  #filename_merged = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_signal_merged_" + str(r+1) + ".root")
+  #filename_merged = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_ZN_signal_merged_" + str(r+1) + ".root")
   #filenames_merged.append(filename_merged)
   #histo = filenames_merged[r].Get("h_N_events_MM")
   #print "r= ", r, ", content= ", histo.Integral(0, 99999, 1, 1)
   
-Egammafile1 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Egamma_thirdLeptonCheck_DeltaR_1.root")
-Egammafile2 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Egamma_thirdLeptonCheck_DeltaR_2.root")
-Egammafile3 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Muons_thirdLeptonCheck_DeltaR_3.root")
+Egammafile1 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Egamma_woJOR_1.root")
+Egammafile2 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Egamma_woJOR_2.root")
+Egammafile3 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_woJOR_3.root")
 
-Muonfile1 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Muons_thirdLeptonCheck_DeltaR_1.root")
-Muonfile2 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Muons_thirdLeptonCheck_DeltaR_2.root")
-Muonfile3 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_fake_Muons_thirdLeptonCheck_DeltaR_3.root")
+Muonfile1 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_woJOR_1.root")
+Muonfile2 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_woJOR_2.root")
+Muonfile3 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_woJOR_3.root")
 
 
 fm = ROOT.TFileMerger(ROOT.kFALSE)
-fm.OutputFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_fakebg_thirdLeptonCheck_DeltaR.root")
+fm.OutputFile("/data/etp/jwittkowski/outputfiles/histos_ZN_fakebg_woJOR.root")
 fm.AddFile(Egammafile1)
 fm.AddFile(Egammafile2)
 fm.AddFile(Egammafile3)

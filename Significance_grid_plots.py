@@ -5,19 +5,19 @@ import sys
 
 from gridCoord import getGridCoordinates, reqidByMc1Mn1
 
-ROOT.gROOT.ProcessLine("gROOT->SetBatch()")
+#ROOT.gROOT.ProcessLine("gROOT->SetBatch()")
 
-name_of_bg_file = ["/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_WW_softLeptonCheck.root", 
-		   "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_WWPlusJets_softLeptonCheck.root", 
-		   "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_ttbarWtop_softLeptonCheck.root",
-		   "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_ZPlusJets_softLeptonCheck.root", 
-		   "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_WZ_softLeptonCheck.root",  
-		   "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_ZZ_softLeptonCheck.root",  
-		   "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_fakebg_softLeptonCheck.root",
-		   "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_Higgs_softLeptonCheck.root"]
+name_of_bg_file = ["/data/etp/jwittkowski/outputfiles/histos_ZN_WW_woJOR.root", 
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_WWPlusJets_woJOR.root", 
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_ttbarWtop_woJOR.root",
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_ZPlusJets_woJOR.root", 
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_WZ_woJOR.root",  
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_ZZ_woJOR.root",  
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_fakebg_woJOR.root",
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_Higgs_woJOR.root"]
 	
 
-name_of_SR = ["MM_SRSS3"]#, "EE_SRSS2", "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4",2 "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
+name_of_SR = ["MM_SRSS1"]#, "EE_SRSS2", "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4",2 "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
 #name_of_SR = ["EE_SRSS1"]#, "EE_SRSS2", "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4", "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
 mcid_of_grid_point = [177501, 177502, 177503, 177504, 177505, 177506, 177507, 177508, 177509, 177510, 177511, 177512, 177513, 177514, 177515, 177516, 177517, 177518, 177519, 177520, 177521, 177522, 177523, 177524, 177525, 177526, 177527]
 
@@ -25,7 +25,7 @@ mcid_of_grid_point = [177501, 177502, 177503, 177504, 177505, 177506, 177507, 17
 ybinProj_EE_SRSS1 = 32
 ybinProj_EE_SRSS2 = 31
 
-ybinProj_MM_SRSS1 = 38
+ybinProj_MM_SRSS1 = 42
 ybinProj_MM_SRSS2 = 127
 ybinProj_MM_SRSS3 = 58
 ybinProj_MM_SRSS4 = 58
@@ -44,38 +44,38 @@ rootfiles_sg = []
 for f in name_of_bg_file:
   rootfiles_bg.append(ROOT.TFile(f))
 
-name_of_signal_file = ["/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177501_softLeptonCheck.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177502_softLeptonCheck.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177503_softLeptonCheck.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177504_softLeptonCheck.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177505_softLeptonCheck.root", 		       
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177506_softLeptonCheck.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177507_softLeptonCheck.root", 		       
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177508_softLeptonCheck.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177509_softLeptonCheck.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177510_softLeptonCheck.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177511_softLeptonCheck.root", 		       
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177512_softLeptonCheck.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177513_softLeptonCheck.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177514_softLeptonCheck.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177515_softLeptonCheck.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177516_softLeptonCheck.root", 		       
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177517_softLeptonCheck.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177518_softLeptonCheck.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177519_softLeptonCheck.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177520_softLeptonCheck.root", 		       
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177521_softLeptonCheck.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177522_softLeptonCheck.root", 
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177523_softLeptonCheck.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177524_softLeptonCheck.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177525_softLeptonCheck.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177526_softLeptonCheck.root",
-		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177527_softLeptonCheck.root"
+name_of_signal_file = ["/data/etp/jwittkowski/outputfiles/histos_ZN_177501_woJOR.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177502_woJOR.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177503_woJOR.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177504_woJOR.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177505_woJOR.root", 		       
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177506_woJOR.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177507_woJOR.root", 		       
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177508_woJOR.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177509_woJOR.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177510_woJOR.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177511_woJOR.root", 		       
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177512_woJOR.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177513_woJOR.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177514_woJOR.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177515_woJOR.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177516_woJOR.root", 		       
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177517_woJOR.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177518_woJOR.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177519_woJOR.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177520_woJOR.root", 		       
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177521_woJOR.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177522_woJOR.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177523_woJOR.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177524_woJOR.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177525_woJOR.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177526_woJOR.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177527_woJOR.root"
 		       ]
 for f in name_of_signal_file:
   rootfiles_sg.append(ROOT.TFile(f))
 
-for b in range(30, 55):  
+for b in range(41, 63):  
   #loop over signal regions:
   for i_s, s in enumerate(name_of_SR):
     ybinProj_list[i_s] = b
@@ -149,7 +149,7 @@ for b in range(30, 55):
       M += 1
     #end loop over grid points
       
-    c1.SaveAs("../pics/significance_Z_N_" + s + "_bin" + str(ybinProj_list[i_s]) + "_softLeptonCheck.pdf")    
+    c1.SaveAs("../pics/significance_Z_N_" + s + "_bin" + str(ybinProj_list[i_s]) + "_woJOR.pdf")    
     #c1.SaveAs("../pics/grid_mcids_new2.pdf")    
 
 

@@ -45,28 +45,21 @@ name_of_signal_file = [
 		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/outputfiles/histos_ZN_177527_thirdLeptonCheck_DeltaR.root"
 		       ]
 
-		  
-#name_of_contributionLegend = ["WW", "WW+Jets", "ttbarW+t", "Z+Jets", "WZ", "ZZ", "fake", "Higgs"]	
-#fillColors = [ROOT.kBlue-2, ROOT.kAzure+8,  ROOT.kOrange-2, ROOT.kSpring+1, ROOT.kGreen+3, ROOT.kGray+1, ROOT.kYellow]
 name_of_contributionLegend = ["Z+Jets", "ttbarW+t", "WZ", "ZZ", "WW", "WW+Jets", "Higgs", "fake"]		
 fillColors = [ROOT.kOrange-2, ROOT.kRed+1, ROOT.kSpring+1, ROOT.kGreen+3, ROOT.kBlue-2, ROOT.kAzure+8, ROOT.kYellow, ROOT.kGray+1]
 name_of_contribution = ["ZPlusJets", "ttbarWPlust", "WZ", "ZZ", "WW", "WWPlusJets", "Higgs", "fake"]
 
-name_of_variables = ["ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft", "DeltaRl0lsoft", "DeltaRl1lsoft", "mTlllsoft", "ml0lprecar", "ml1lprecar", "mTl0lprecar", "mTl1lprecar", "DeltaRl0lprecar", "DeltaRl1lprecar", "mTlllprecar", "ml0loverlap", "ml1loverlap", "mTl0loverlap", "mTl1loverlap", "DeltaRl0loverlap", "DeltaRl1loverlap", "mTllloverlap", "ml0llost", "ml1llost", "mTl0llost", "mTl1llost", "DeltaRl0llost", "DeltaRl1llost", "mTllllost"]
+name_of_variables = ["ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft", "DeltaRl0lsoft", "DeltaRl1lsoft", "mTlllsoft", "ml0loverlap", "ml1loverlap", "mTl0loverlap", "mTl1loverlap", "DeltaRl0loverlap", "DeltaRl1loverlap", "mTllloverlap", "ml0llost", "ml1llost", "mTl0llost", "mTl1llost", "DeltaRl0llost", "DeltaRl1llost", "mTllllost"]
 
 
     
 #name_of_variables = ["pTl0", "pTl1", "pTj0", "pTj1", "mll", "METrel", "MET", "HT", "mWWt", "mTlmin", "meff", "mt2", "mjj", "DeltaPhiMETll", "DeltaPhill", "NBJets", "NFJets", "NCJets", "DeltaPhijj", "pTjj", "ptll", "DeltaPhiMETl0", "DeltaPhiMETl1", "DeltaPhiMETj0", "DeltaPhiMETj1", "DeltaPhiMETjj", "DeltaRjj", "etal0", "etal1", "etaj0", "etaj1", "mTl0MET", "mTl1MET", "DeltaPhilljj", "DeltaPhil0jj", "DeltaPhil1jj", "DeltaRlljj", "DeltaEtajj", "mTll", "mMETll", "DeltaYjj", "DeltaEtall"]#, "D0_recalc_l0", "D0_recalc_l1", "D0_branch_l0", "D0_branch_l1", "D0Signif_recalc_l0", "D0Signif_recalc_l1", "D0Signif_branch_l0", "D0Signif_branch_l1", "mZTT_coll", "mZTT_mmc", "ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft", "Mljj", "mTlmax"]
 
-#cut_list = [2, 50, 50, 80, 40, 50, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-
-x_axis_title = ["ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft", "DeltaRl0lsoft", "DeltaRl1lsoft", "mTlllsoft", "ml0lprecar", "ml1lprecar", "mTl0lprecar", "mTl1lprecar", "DeltaRl0lprecar", "DeltaRl1lprecar", "mTlllprecar", "ml0loverlap", "ml1loverlap", "mTl0loverlap", "mTl1loverlap", "DeltaRl0loverlap", "DeltaRl1loverlap", "mTllloverlap", "ml0llost", "ml1llost", "mTl0llost", "mTl1llost", "DeltaRl0llost", "DeltaRl1llost", "mTllllost"]
+x_axis_title = ["ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft", "DeltaRl0lsoft", "DeltaRl1lsoft", "mTlllsoft", "mTlllprecar", "ml0loverlap", "ml1loverlap", "mTl0loverlap", "mTl1loverlap", "DeltaRl0loverlap", "DeltaRl1loverlap", "mTllloverlap", "ml0llost", "ml1llost", "mTl0llost", "mTl1llost", "DeltaRl0llost", "DeltaRl1llost", "mTllllost"]
 #x_axis_title = ["p_{Tl0}","p_{Tl1}","p_{Tj0}","p_{Tj1}", "m_{ll}", "E_{T}^{miss, rel}", "E_{T}^{miss}", "H_{T}", "m_{TWW}", "min(m_{T}(l0, l1))", "m_{eff}", "m_{T2}", "m_{jj}", "#Delta#Phi(E_{T}^{miss}, ll)", "#Delta#Phi(l0,l1)", "NBJets", "NFJets", "NCJets", "#Delta#Phi(j0, j1)", "p_{T,jj}", "p_{T,ll}", "#Delta#Phi(E_{T}^{miss},l0)", "#Delta#Phi(E_{T}^{miss},l1)", "#Delta#Phi(E_{T}^{miss},j0)", "#Delta#Phi(E_{T}^{miss},j1)", "#Delta#Phi(E_{T}^{miss},jj)", "#DeltaR(j,j)", "#eta_{l0}", "#eta_{l1}", "#eta_{j0}", "#eta_{j1}", "m_{T}(l0, E_{T}^{miss})", "m_{T}(l1, E_{T}^{miss})", "#Delta#Phi(ll,jj)", "#Delta#Phi(l0,jj)", "#Delta#Phi(l1,jj)", "#DeltaR(ll,jj)", "#Delta#ta(j,j)", "m_{T,ll}", "m_{E_{T}^{miss},ll}", "#DeltaY(j,j)", "#Delta#eta(l0,l1)"]#,"d0 recalc l0", "d0 recalc l1", "d0 branch l0", "d0 branch l1", "d0/#sigmad0 recalc l0", "d0/#sigmad0 recalc l1", "d0/#sigmad0 branch l0", "d0/#sigmad0 branch l1", "m_{Z->#tau#tau} (coll)","m_{Z->#tau#tau} (mmc)", "m_{l0lsoft}", "m_{l1lsoft}", "m_{Tl0lsoft}", "m_{Tl1lsoft}", "M_{ljj}", "max(m_{T}(l0, l1))"]
 
-name_of_SR = ["EM_SRSS1"]#, "EE_SRSS2"]#, "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4", "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
-#name_of_SR = ["EE_SRSS1", "EE_SRSS2", "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4", "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
-#mcid_of_grid_point = ["177502", "177504", "177508", "177513", "177523", "177525"]
-#mcid_of_grid_point = ["177508", "177513"]
+name_of_SR = ["MM_SRSS1"]#, "EE_SRSS2"]#, "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4", "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
+
 mcid_of_grid_point = ["177501","177502", "177503", "177504","177505", "177506","177507", "177508", "177509", "177510","177511", "177512", "177513", "177514","177515","177516", "177517","177518","177519","177520", "177521", "177522", "177523", "177524", "177525", "177526", "177527"]
 
 
@@ -112,10 +105,6 @@ if print_numbers_contributions:
 
   print 'WH mass point & events processed & MMSRSS1 & MMSRSS2 & MMSRSS3\\\\'
   print "\hline  "
-  #sum_EE = 0
-  #sum_MM = 0
-  #sum_EM = 0
-  #sum_total = 0
   for i_g, rf in enumerate(rootfiles_gridpoints):  
     bg_histo_EE = rf.Get("h_HT_MM_SRSS1")	
     bg_histo_projected_EE = bg_histo_EE.ProjectionX("h_HT_MM_SRSS1" + mcid_of_grid_point[i_g], 27, 27)
@@ -125,10 +114,6 @@ if print_numbers_contributions:
     bg_histo_EM = rf.Get("h_HT_MM_SRSS1")	
     bg_histo_projected_EM = bg_histo_EM.ProjectionX("h_HT_MM_SRSS1" + mcid_of_grid_point[i_g], 27, 27)
     bg_histo_total = rf.Get("cutflow_MM")	
-    #sum_EE = sum_EE + bg_histo_projected_EE.Integral(0, nbins + 2)
-    #sum_MM = sum_MM + bg_histo_projected_MM.Integral(0, nbins + 2)
-    #sum_EM = sum_EM + bg_histo_projected_EM.Integral(0, nbins + 2)
-    #sum_total = sum_total + bg_histo_total.GetBinContent( 1)
     print mcid_of_grid_point[i_g], ": & ", round(bg_histo_total.GetBinContent( 1),2), " & ",round(bg_histo_projected_EE.Integral(0, nbins + 2),2), " & ", round(bg_histo_projected_MM.Integral(0, nbins + 2),2), " & ",round(bg_histo_projected_EM.Integral(0, nbins + 2),2), "\\\\"
   print "\hline"  
 #====================================================================================================================================================================  
@@ -216,7 +201,6 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
 	  binning = 120
 
 	#do a rebinning :
-	#print "rebin with nbins/binning = ", nbins, "/", binning, " = ", nbins/binning
 	bg_histo_projected.Rebin(nbins/binning)
 	
 	bg_histo_projected.SetMarkerStyle(21)
@@ -227,7 +211,6 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
 	leg_stack.AddEntry(bg_histo_projected,name_of_contributionLegend[i_rf],"F")
 	#add projection of bg histo to stack for lower plot:
 	stack.Add(bg_histo_projected)
-	#print name_of_contributionLegend[i_rf], "        ", bg_histo_projected.Integral(0, nbins + 2)
 	
 	#if it is the first bg histo, define individual h_sum_bg for every signal grid point i_g:
 	if i_rf == 0:
@@ -246,9 +229,11 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
 	  pad1.SetLogy(1)
 	  pad1.SetFillColor(ROOT.kWhite)
 
-	  #pad2 = ROOT.TPad("pad2","pad2", 0.0, 0.85, 1.0, 1.0, 0, 0)
-	  #pad2.Draw()
-	  #pad2.SetFillColor(ROOT.kWhite)
+	  draw_pad2 = False
+	  if draw_pad2:
+	    pad2 = ROOT.TPad("pad2","pad2", 0.0, 0.85, 1.0, 1.0, 0, 0)
+	    pad2.Draw()
+	    pad2.SetFillColor(ROOT.kWhite)
 	  
 	  #enter first TPad for stack plot:
 	  pad1.cd()
@@ -256,40 +241,17 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
 	  pad1.SetLeftMargin(0.2)
 	  pad1.SetRightMargin(0.05)
 	  pad1.SetTopMargin(0.0)  
-	  
 	  stack.Draw("HIST")   
 	  stack.GetYaxis().SetTitle("Events / " + str((last_bin+0.0)/(binning+0.0)) + " units ")    
 	  stack.GetYaxis().SetTitleOffset(2.5)
 	  stack.GetXaxis().SetTitle(x_axis_title[i_v]) 
 	  stack.SetTitle(s + " bin " + str(ybinProj_list[i_s]))
 	  
-	  #if v == "D0Signif_recalc_l0" or v == "D0Signif_recalc_l1" or v == "D0Signif_branch_l0" or v == "D0Signif_branch_l1":
-	    #gaussfit = ROOT.TF1("gauss", "[0] / sqrt(2.0 * TMath::Pi()) / [2] * exp(-(x-[1])*(x-[1])/2./[2]/[2])", 0, 500)
-	    #gaussfit.SetParameters(7000.,5.,5)                                                                  
-	    #gaussfit.SetParName(0,"A");
-	    #gaussfit.SetParName(1,"#mu");
-	    #gaussfit.SetParName(2,"#sigma");
-	    #gaussfit.SetLineColor(ROOT.kPink)
-	    #ROOT.gStyle.SetStatFontSize(0.13)
-	    #ROOT.gStyle.SetOptFit(1)
-	    #ROOT.gStyle.SetOptStat()
-	    #gaussfit.SetRange(-40, 40)
-	    ##if v=="mZTT_coll":
-	    ##gaussfit.SetRange(40, 130)
-	    ##if v=="mZTT_mmc":
-	    ##gaussfit.SetRange(5, 200)
-	    ##if v=="mZTT_missMassCalc":
-	    ##gaussfit.SetRange(5, 200)
-	    #stack.Fit("gauss")
-	    #gaussfit.Draw("same")
-	  
 	  #for merged signal grid point: just draw histogram:	
 	  print histoname
 	  grid_point_file_histo = grid_point_file.Get(histoname)
 	  #grid_point_file_histo.Print()
 	  grid_point_file_histo_projected = grid_point_file_histo.ProjectionX(histoname + "_1D_signal_" + name_of_contribution[i_rf], ybinProj_list[i_s], ybinProj_list[i_s])
-	  #print str(mcid_of_grid_point[i_g]), "      ", grid_point_file_histo_projected.Integral(0, nbins + 2)
-	  #grid_point_file_histo_projected.Print()
 	  #make sure to use the same binning:
 	  grid_point_file_histo_projected.Rebin(nbins/binning)
 	  
@@ -299,7 +261,6 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
 	    scale_for_signal = 0
 	  else:
 	    scale_for_signal = stack.GetMaximum()/signal_max/2
-	  #print "scale_for_signal= ", scale_for_signal
 	  if scale_for_signal > 100000.:
 	    scale = 100000
 	  elif scale_for_signal > 10000:
@@ -323,154 +284,144 @@ for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
 	#end of loop over rootfiles_bg        
 	
 	
-      #draw legend, cut line:
-
-      #line = ROOT.TLine(cut_list[i_v] ,0. , cut_list[i_v], 10000000.)
-      #line.SetLineWidth(5)
-      #line.SetLineColor(ROOT.kRed-7)
-      #line.Draw("same")
-      
+      #draw legend     
       leg_stack.SetHeader(s)
       leg_stack.SetTextSize(0.025)
       leg_stack.Draw("same")
       
-      #access second TPad for Z_N, cut efficiency plots:
-      #pad2.cd()
-      #pad2.SetBottomMargin(0.0)
-      #pad2.SetLeftMargin(0.2)
-      #pad2.SetRightMargin(0.05)
-      
-      ##define histos for pad2 and do rebinning:
-      #h_ZN = ROOT.TH1D(histoname + "_" + mcid_of_grid_point[i_g] + "_ZN", histoname + "_" + mcid_of_grid_point[i_g] + "_ZN", nbins, first_bin, last_bin)
-      #h_ZN.Rebin(nbins/binning)
-      #h_cut_eff_bg = ROOT.TH1D(histoname + "_" + mcid_of_grid_point[i_g] + "_cut_eff_bg", histoname + "_" + mcid_of_grid_point[i_g] + "_cut_eff_bg", nbins, first_bin, last_bin)
-      #h_cut_eff_bg.Rebin(nbins/binning)
-      #h_cut_eff_signal = ROOT.TH1D(histoname + "_" + mcid_of_grid_point[i_g] + "_cut_eff_signal", histoname + "_" + mcid_of_grid_point[i_g] + "_cut_eff_signal", nbins, first_bin, last_bin)
-      #h_cut_eff_signal.Rebin(nbins/binning)
-      #grid_point_file_histo = grid_point_file.Get(histoname)
-      
-      ##projection of signal contribution to read bin content for Z_N
-      #signal_histo_1D = grid_point_file.Get(histoname).ProjectionX(histoname + "_1D_signal", ybinProj_list[i_s], ybinProj_list[i_s])      
-      
-      #signal_histo_1D.Rebin(nbins/binning)
-      #n_bins = h_sum_bg.GetNbinsX()
-
-      ##define ratios etc:
-      #Z_N_max_bin = 0
-      #Z_N_max = 0.
-      #pos_line_Z_N_max = 0.
-      #diff_eff_max_bin = 0
-      #diff_eff_max = 0.
-      #eff_max = 0.
-      #pos_line_diff_eff_max = 0.
-      
-      ##loop over all bins in 1D-histo for particular variable:
-      #for it_bins in range(1, n_bins+1):
-	##get N events bg & signal:
-	#if cut_if_value_higher:
-	  #bg_events = h_sum_bg.Integral(0, it_bins-1)    
-	  #signal_events = signal_histo_1D.Integral(0, it_bins-1)
-	#else:
-	  #bg_events = h_sum_bg.Integral(it_bins, n_bins+2)   
-	  #signal_events = signal_histo_1D.Integral(it_bins, n_bins+2)
-	  
-	##calc Z_N:
-	#Z_N = ROOT.RooStats.NumberCountingUtils.BinomialExpZ(signal_events, bg_events, 0.25)
-	##set Z_N to 0 if bad return value:
-	#if Z_N<0 or bg_events==0 or Z_N > 1000.:
-	  #Z_N = 0.
-	#h_ZN.SetBinContent(it_bins, Z_N)
-	##print "it_bins= ", it_bins, " signal_events= ", signal_events, " , bg_events= ", bg_events, ", Z_N= ", Z_N
+      if draw_pad2:
+	#access second TPad for Z_N, cut efficiency plots:
+	pad2.cd()
+	pad2.SetBottomMargin(0.0)
+	pad2.SetLeftMargin(0.2)
+	pad2.SetRightMargin(0.05)
 	
-	##calculate max Z_N and corresponding bin:
-	#if Z_N > Z_N_max:
-	  #Z_N_max_bin = it_bins
-	  #Z_N_max = Z_N
-	##print "Z_N_max= ", Z_N_max, " Z_N_max_bin= ", Z_N_max_bin
-	  
-	##calculate cut efficiency bg:
-	#content_below_x_bg = h_sum_bg.Integral(0, it_bins-1)
-	#content_with_and_above_x_bg = h_sum_bg.Integral(it_bins, n_bins+2)
-	#content_bg = h_sum_bg.Integral(0, n_bins+2)
-	#cut_efficiency_bg = 0.
-	#if content_bg>0:
-	  #if cut_if_value_higher:
-	  ##else you cut on values SMALLER than x
-	    #cut_efficiency_bg = content_below_x_bg / content_bg
-	  #else:
-	    #cut_efficiency_bg = content_with_and_above_x_bg / content_bg
+	#define histos for pad2 and do rebinning:
+	h_ZN = ROOT.TH1D(histoname + "_" + mcid_of_grid_point[i_g] + "_ZN", histoname + "_" + mcid_of_grid_point[i_g] + "_ZN", nbins, first_bin, last_bin)
+	h_ZN.Rebin(nbins/binning)
+	h_cut_eff_bg = ROOT.TH1D(histoname + "_" + mcid_of_grid_point[i_g] + "_cut_eff_bg", histoname + "_" + mcid_of_grid_point[i_g] + "_cut_eff_bg", nbins, first_bin, last_bin)
+	h_cut_eff_bg.Rebin(nbins/binning)
+	h_cut_eff_signal = ROOT.TH1D(histoname + "_" + mcid_of_grid_point[i_g] + "_cut_eff_signal", histoname + "_" + mcid_of_grid_point[i_g] + "_cut_eff_signal", nbins, first_bin, last_bin)
+	h_cut_eff_signal.Rebin(nbins/binning)
+	grid_point_file_histo = grid_point_file.Get(histoname)
+	
+	#projection of signal contribution to read bin content for Z_N
+	signal_histo_1D = grid_point_file.Get(histoname).ProjectionX(histoname + "_1D_signal", ybinProj_list[i_s], ybinProj_list[i_s])      
+	
+	signal_histo_1D.Rebin(nbins/binning)
+	n_bins = h_sum_bg.GetNbinsX()
+
+	#define ratios etc:
+	Z_N_max_bin = 0
+	Z_N_max = 0.
+	pos_line_Z_N_max = 0.
+	diff_eff_max_bin = 0
+	diff_eff_max = 0.
+	eff_max = 0.
+	pos_line_diff_eff_max = 0.
+	
+	#loop over all bins in 1D-histo for particular variable:
+	for it_bins in range(1, n_bins+1):
+	  #get N events bg & signal:
+	  if cut_if_value_higher:
+	    bg_events = h_sum_bg.Integral(0, it_bins-1)    
+	    signal_events = signal_histo_1D.Integral(0, it_bins-1)
+	  else:
+	    bg_events = h_sum_bg.Integral(it_bins, n_bins+2)   
+	    signal_events = signal_histo_1D.Integral(it_bins, n_bins+2)
 	    
-	#h_cut_eff_bg.SetBinContent(it_bins, cut_efficiency_bg)  
+	  #calc Z_N:
+	  Z_N = ROOT.RooStats.NumberCountingUtils.BinomialExpZ(signal_events, bg_events, 0.25)
+	  #set Z_N to 0 if bad return value:
+	  if Z_N<0 or bg_events==0 or Z_N > 1000.:
+	    Z_N = 0.
+	  h_ZN.SetBinContent(it_bins, Z_N)
+	  
+	  #calculate max Z_N and corresponding bin:
+	  if Z_N > Z_N_max:
+	    Z_N_max_bin = it_bins
+	    Z_N_max = Z_N
+	  #print "Z_N_max= ", Z_N_max, " Z_N_max_bin= ", Z_N_max_bin
+	    
+	  #calculate cut efficiency bg:
+	  content_below_x_bg = h_sum_bg.Integral(0, it_bins-1)
+	  content_with_and_above_x_bg = h_sum_bg.Integral(it_bins, n_bins+2)
+	  content_bg = h_sum_bg.Integral(0, n_bins+2)
+	  cut_efficiency_bg = 0.
+	  if content_bg>0:
+	    if cut_if_value_higher:
+	    #else you cut on values SMALLER than x
+	      cut_efficiency_bg = content_below_x_bg / content_bg
+	    else:
+	      cut_efficiency_bg = content_with_and_above_x_bg / content_bg
+	      
+	  h_cut_eff_bg.SetBinContent(it_bins, cut_efficiency_bg)  
+	  
+	  #calculate cut efficiency signal:
+	  content_below_x_s = signal_histo_1D.Integral(0, it_bins-1)
+	  content_with_and_above_x_s = signal_histo_1D.Integral(it_bins, n_bins+2)
+	  content_s = signal_histo_1D.Integral(0, n_bins+2)
+	  cut_efficiency_s = 0.
+	  if content_s>0:
+	    if cut_if_value_higher:
+	      cut_efficiency_s = content_below_x_s / content_s
+	    else:
+	      cut_efficiency_s = content_with_and_above_x_s / content_s
+	  h_cut_eff_signal.SetBinContent(it_bins, cut_efficiency_s)  
+	  
+	  #where is the difference between the two efficiencies at maximum -> most recommended cut?:
+	  diff_eff = abs(cut_efficiency_bg - cut_efficiency_s)
+	  if diff_eff > diff_eff_max:
+	    diff_eff_max = diff_eff
+	    diff_eff_max_bin = it_bins
+	  if max(cut_efficiency_bg, cut_efficiency_s) > eff_max:
+	      eff_max = max(cut_efficiency_bg, cut_efficiency_s)  
 	
-	##calculate cut efficiency signal:
-	#content_below_x_s = signal_histo_1D.Integral(0, it_bins-1)
-	#content_with_and_above_x_s = signal_histo_1D.Integral(it_bins, n_bins+2)
-	#content_s = signal_histo_1D.Integral(0, n_bins+2)
-	#cut_efficiency_s = 0.
-	#if content_s>0:
-	  #if cut_if_value_higher:
-	    #cut_efficiency_s = content_below_x_s / content_s
-	  #else:
-	    #cut_efficiency_s = content_with_and_above_x_s / content_s
-	#h_cut_eff_signal.SetBinContent(it_bins, cut_efficiency_s)  
+	#end loop over bins
 	
-	##where is the difference between the two efficiencies at maximum -> most recommended cut?:
-	#diff_eff = abs(cut_efficiency_bg - cut_efficiency_s)
-	##print "it_bins= ", it_bins, " diff_eff= ", diff_eff, " , cut_efficiency_bg= ", cut_efficiency_bg, ", cut_efficiency_s= ", cut_efficiency_s
-	#if diff_eff > diff_eff_max:
-	  #diff_eff_max = diff_eff
-	  #diff_eff_max_bin = it_bins
-	#if max(cut_efficiency_bg, cut_efficiency_s) > eff_max:
-	    #eff_max = max(cut_efficiency_bg, cut_efficiency_s)  
-      
-      ##end loop over bins
-      
-      ##draw cut efficiencies signal and bg:
-      #h_cut_eff_signal.GetYaxis().SetTitle("significance")
-      #h_cut_eff_signal.GetYaxis().SetTitleOffset(0.5)
-      #h_cut_eff_signal.GetYaxis().SetTitleSize(0.15)
-      #h_cut_eff_signal.SetTitle("")
-      #h_cut_eff_bg.SetLineColor(1)
-      #h_cut_eff_bg.SetTitle("")
-      #h_cut_eff_signal.SetLineColor(ROOT.kRed)
-      ##h_cut_eff_signal.SetTitle(histoname + " bin " + str(ybinProj_list[i_s]))
-      #h_cut_eff_signal.Draw("l")
-      #ROOT.gStyle.SetOptStat(0)
-      #h_cut_eff_bg.Draw("lsame")
-      
-      ##draw line for max difference in efficiencies:
-      #pos_line_diff_eff_max = last_bin / binning * (diff_eff_max_bin - 0.5)
+	#draw cut efficiencies signal and bg:
+	h_cut_eff_signal.GetYaxis().SetTitle("significance")
+	h_cut_eff_signal.GetYaxis().SetTitleOffset(0.5)
+	h_cut_eff_signal.GetYaxis().SetTitleSize(0.15)
+	h_cut_eff_signal.SetTitle("")
+	h_cut_eff_bg.SetLineColor(1)
+	h_cut_eff_bg.SetTitle("")
+	h_cut_eff_signal.SetLineColor(ROOT.kRed)
+	h_cut_eff_signal.Draw("l")
+	ROOT.gStyle.SetOptStat(0)
+	h_cut_eff_bg.Draw("lsame")
+	
+	#draw line for max difference in efficiencies:
+	pos_line_diff_eff_max = last_bin / binning * (diff_eff_max_bin - 0.5)
 
-      #line_diff_eff = ROOT.TLine(pos_line_diff_eff_max ,0. , pos_line_diff_eff_max, eff_max)
-      ##print "pos_line_Z_N_max: ", pos_line_Z_N_max, "Z_N_max= ", Z_N_max, "pos_line_diff_eff_max= ", pos_line_diff_eff_max, " diff_eff_max= ", diff_eff_max
-      #line_diff_eff.SetLineWidth(5)
-      #line_diff_eff.SetLineColor(ROOT.kBlack)
-      #line_diff_eff.Draw("same")
-      
-      ##draw Z_N, cut efficiencies + legend:
-      #h_ZN.SetLineColor(ROOT.kBlue)
-      #h_ZN.SetLineStyle(2)
-      #h_ZN.SetTitle("")
-      #h_ZN.Draw("lsame")
-      #pos_line_Z_N_max = (last_bin+0.0) / (binning+0.0) * ((Z_N_max_bin+0.0) - 0.5)
-      ##print "pos_line_Z_N_max= ", pos_line_Z_N_max, "last_bin= ", last_bin, " binning= ", binning, "Z_N_max_bin= ", Z_N_max_bin
+	line_diff_eff = ROOT.TLine(pos_line_diff_eff_max ,0. , pos_line_diff_eff_max, eff_max)
+	line_diff_eff.SetLineWidth(5)
+	line_diff_eff.SetLineColor(ROOT.kBlack)
+	line_diff_eff.Draw("same")
+	
+	#draw Z_N, cut efficiencies + legend:
+	h_ZN.SetLineColor(ROOT.kBlue)
+	h_ZN.SetLineStyle(2)
+	h_ZN.SetTitle("")
+	h_ZN.Draw("lsame")
+	pos_line_Z_N_max = (last_bin+0.0) / (binning+0.0) * ((Z_N_max_bin+0.0) - 0.5)
+	#print "pos_line_Z_N_max= ", pos_line_Z_N_max, "last_bin= ", last_bin, " binning= ", binning, "Z_N_max_bin= ", Z_N_max_bin
 
-      #line_Z = ROOT.TLine(pos_line_Z_N_max ,0. , pos_line_Z_N_max, Z_N_max)
-      #line_Z.SetLineWidth(5)
-      #line_Z.SetLineColor(ROOT.kBlue)
-      #line_Z.Draw("same")
-      
-      ##draw legend for upper plot:
-      #leg_ZN = ROOT.TLegend(0.45,0.6,0.9,0.99)
-      #leg_ZN.SetFillColor(0)
-      #leg_ZN.SetHeader("Z_{N} " + str(round(Z_N_max,2)) + " at " + str(round(pos_line_Z_N_max,2)) + ", #Delta #epsilon: " + str(round(diff_eff_max,2)) + " at " + str(round(pos_line_diff_eff_max,2)) + " mcid " + str(mcid_of_grid_point[i_g]) )
-      ##leg_ZN.AddEntry(h_ZN,"Z_{N}","l")
-      ##leg_ZN.AddEntry(h_cut_eff_signal,"signal cut #epsilon","l")
-      ##leg_ZN.AddEntry(h_cut_eff_bg,"bg cut #epsilon","l")
-      #leg_ZN.SetTextSize(0.15)
-      #leg_ZN.Draw("same")
+	line_Z = ROOT.TLine(pos_line_Z_N_max ,0. , pos_line_Z_N_max, Z_N_max)
+	line_Z.SetLineWidth(5)
+	line_Z.SetLineColor(ROOT.kBlue)
+	line_Z.Draw("same")
+	
+	#draw legend for upper plot:
+	leg_ZN = ROOT.TLegend(0.45,0.6,0.9,0.99)
+	leg_ZN.SetFillColor(0)
+	leg_ZN.SetHeader("Z_{N} " + str(round(Z_N_max,2)) + " at " + str(round(pos_line_Z_N_max,2)) + ", #Delta #epsilon: " + str(round(diff_eff_max,2)) + " at " + str(round(pos_line_diff_eff_max,2)) + " mcid " + str(mcid_of_grid_point[i_g]) )
+	leg_ZN.SetTextSize(0.15)
+	leg_ZN.Draw("same")
 
-      #pad2.cd().Update()
+	pad2.cd().Update()
+	#end draw_pad2
+	
       c1.SaveAs("/data/etp/jwittkowski/pics/cumulative_pdf_" + v + "_" + s + "_" + mcid_of_grid_point[i_g] + "_bin" + str(ybinProj_list[i_s]) + "_thirdLeptonCheck_DeltaR.pdf")
     #end loop over signal regions
   #end loop over variables
