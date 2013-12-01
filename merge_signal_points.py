@@ -61,17 +61,17 @@ import ROOT
   #histo = filenames_merged[r].Get("h_N_events_MM")
   #print "r= ", r, ", content= ", histo.Integral(0, 99999, 1, 1)
   
-Egammafile1 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Egamma_woJOR_1.root")
-Egammafile2 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Egamma_woJOR_2.root")
-Egammafile3 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_woJOR_3.root")
+Egammafile1 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Egamma_WOJ_fix_1.root")
+Egammafile2 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Egamma_WOJ_fix_2.root")
+Egammafile3 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_WOJ_fix_3.root")
 
-Muonfile1 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_woJOR_1.root")
-Muonfile2 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_woJOR_2.root")
-Muonfile3 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_woJOR_3.root")
+Muonfile1 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_WOJ_fix_1.root")
+Muonfile2 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_WOJ_fix_2.root")
+Muonfile3 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_WOJ_fix_3.root")
 
 
 fm = ROOT.TFileMerger(ROOT.kFALSE)
-fm.OutputFile("/data/etp/jwittkowski/outputfiles/histos_ZN_fakebg_woJOR.root")
+fm.OutputFile("/data/etp/jwittkowski/outputfiles/histos_ZN_fakebg_WOJ_fix.root")
 fm.AddFile(Egammafile1)
 fm.AddFile(Egammafile2)
 fm.AddFile(Egammafile3)

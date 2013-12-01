@@ -7,7 +7,7 @@ import ROOT
 name_of_bg_file = [
 		    #"/data/etp/jwittkowski/outputfiles/histos_ZN_ZPlusJets_ORcategory.root", 
 		    #"/data/etp/jwittkowski/outputfiles/histos_ZN_ttbarWtop_ORcategory.root",
-		    "/data/etp/jwittkowski/outputfiles/histos_ZN_WZ_woJOR.root"
+		    "/data/etp/jwittkowski/outputfiles/histos_ZN_WZ_woJOR_check.root"
 		    #"/data/etp/jwittkowski/outputfiles/histos_ZN_ZZ_ORcategory.root",  
 		    #"/data/etp/jwittkowski/outputfiles/histos_ZN_WW_ORcategory.root", 
 		    #"/data/etp/jwittkowski/outputfiles/histos_ZN_WWPlusJets_ORcategory.root", 

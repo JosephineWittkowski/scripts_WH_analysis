@@ -7,14 +7,14 @@ from gridCoord import getGridCoordinates, reqidByMc1Mn1
 
 #ROOT.gROOT.ProcessLine("gROOT->SetBatch()")
 
-name_of_bg_file = ["/data/etp/jwittkowski/outputfiles/histos_ZN_WW_woJOR.root", 
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_WWPlusJets_woJOR.root", 
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_ttbarWtop_woJOR.root",
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_ZPlusJets_woJOR.root", 
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_WZ_woJOR.root",  
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_ZZ_woJOR.root",  
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_fakebg_woJOR.root",
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_Higgs_woJOR.root"]
+name_of_bg_file = ["/data/etp/jwittkowski/outputfiles/histos_ZN_WW_WOFJ_fix.root", 
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_WWPlusJets_WOFJ_fix.root", 
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_ttbarWtop_WOFJ_fix.root",
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_ZPlusJets_WOFJ_fix.root", 
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_WZ_WOFJ_fix.root",  
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_ZZ_WOFJ_fix.root",  
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_fakebg_WOFJ_fix.root",
+		   "/data/etp/jwittkowski/outputfiles/histos_ZN_Higgs_WOFJ_fix.root"]
 	
 
 name_of_SR = ["MM_SRSS1"]#, "EE_SRSS2", "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4",2 "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
@@ -44,33 +44,33 @@ rootfiles_sg = []
 for f in name_of_bg_file:
   rootfiles_bg.append(ROOT.TFile(f))
 
-name_of_signal_file = ["/data/etp/jwittkowski/outputfiles/histos_ZN_177501_woJOR.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177502_woJOR.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177503_woJOR.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177504_woJOR.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177505_woJOR.root", 		       
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177506_woJOR.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177507_woJOR.root", 		       
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177508_woJOR.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177509_woJOR.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177510_woJOR.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177511_woJOR.root", 		       
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177512_woJOR.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177513_woJOR.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177514_woJOR.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177515_woJOR.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177516_woJOR.root", 		       
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177517_woJOR.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177518_woJOR.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177519_woJOR.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177520_woJOR.root", 		       
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177521_woJOR.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177522_woJOR.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177523_woJOR.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177524_woJOR.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177525_woJOR.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177526_woJOR.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177527_woJOR.root"
+name_of_signal_file = ["/data/etp/jwittkowski/outputfiles/histos_ZN_177501_WOFJ_fix.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177502_WOFJ_fix.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177503_WOFJ_fix.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177504_WOFJ_fix.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177505_WOFJ_fix.root", 		       
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177506_WOFJ_fix.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177507_WOFJ_fix.root", 		       
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177508_WOFJ_fix.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177509_WOFJ_fix.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177510_WOFJ_fix.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177511_WOFJ_fix.root", 		       
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177512_WOFJ_fix.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177513_WOFJ_fix.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177514_WOFJ_fix.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177515_WOFJ_fix.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177516_WOFJ_fix.root", 		       
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177517_WOFJ_fix.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177518_WOFJ_fix.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177519_WOFJ_fix.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177520_WOFJ_fix.root", 		       
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177521_WOFJ_fix.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177522_WOFJ_fix.root", 
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177523_WOFJ_fix.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177524_WOFJ_fix.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177525_WOFJ_fix.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177526_WOFJ_fix.root",
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177527_WOFJ_fix.root"
 		       ]
 for f in name_of_signal_file:
   rootfiles_sg.append(ROOT.TFile(f))
@@ -149,7 +149,7 @@ for b in range(41, 63):
       M += 1
     #end loop over grid points
       
-    c1.SaveAs("../pics/significance_Z_N_" + s + "_bin" + str(ybinProj_list[i_s]) + "_woJOR.pdf")    
+    c1.SaveAs("../pics/significance_Z_N_" + s + "_bin" + str(ybinProj_list[i_s]) + "_WOFJ_fix.pdf")    
     #c1.SaveAs("../pics/grid_mcids_new2.pdf")    
 
 
