@@ -1,90 +1,70 @@
 import ROOT
-#from gridCoord import getGridCoordinates, reqidByMc1Mn1
+  
+Egammafile1 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_fake_Egamma_bgTable_1.root")
+Egammafile2 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_fake_Egamma_bgTable_2.root")
+Egammafile3 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_fake_Egamma_bgTable_3.root")
+Egammafile4 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_fake_Egamma_bgTable_4.root")
+Egammafile5 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_fake_Egamma_bgTable_5.root")
+Egammafile6 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_fake_Egamma_bgTable_6.root")
 
-#doMerge = 1
-
-#names_of_merged_grid_points = [1765700, 1765800, 1765900, 1766000, 1766100, 1766200, 1766300]
-#number_of_points = [0, 0, 0, 0, 0, 0, 0]
-#filenames = []
-#mcids = []
-#for mcid in range(176574, 176641):
-  #if mcid == 176585 or mcid == 176614:
-    #continue
-  #filenames.append(ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_ZN_signal_" + str(mcid) + ".root"))
-  #mcids.append(mcid)
-  
-##print filenames
-
-#if doMerge:
-  #print "MERGING MERGING MERGING"
-  #filemergers = []
-  #for r in range(0,7):
-    #filemerger = ROOT.TFileMerger(ROOT.kFALSE)
-    #filemerger.OutputFile("/data/etp/jwittkowski/outputfiles/histos_ZN_signal_merged_" + str(r+1) + ".root")
-    #filemergers.append(filemerger)
-  
-#bincontent = [0., 0., 0., 0., 0., 0., 0.] 
-#for i_f, filename in enumerate(filenames):
-  ##if i_f == 11 or i_f == 40:
-    ##continue
-  
-  ##filename.Print()
-  ##histo = filename.Get("h_N_events_MM")
-  #mcid = mcids[i_f]
-  
-  
-
-  ##print "mcid= ", mcid
-  #xcoord, ycoord, xsec = getGridCoordinates(mcid)
-  #r = reqidByMc1Mn1(xcoord, ycoord)
-  #print "r= ", r, ", mcid= ", mcid
-  ##bincontent[r] += histo.Integral(mcid-99999, mcid-99999, 1, 1)
-  ##print getGridCoordinates(mcid)
-  ##openedFile = ROOT.TFile(filename)
-  ##filename.Print()
-  #number_of_points[r] += 1
-  #if doMerge:
-    #filemergers[r].AddFile(filename)
-#if doMerge:
-  #for r in range(0,7):
-    #filemergers[r].PartialMerge()
-  
-#for filename in (filenames):
-  #filename.Close()
-#print number_of_points
-
-#filenames_merged = []
-#for r in range(0,7):
-  #print "bincontent= ", bincontent[r]
-  #filename_merged = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_ZN_signal_merged_" + str(r+1) + ".root")
-  #filenames_merged.append(filename_merged)
-  #histo = filenames_merged[r].Get("h_N_events_MM")
-  #print "r= ", r, ", content= ", histo.Integral(0, 99999, 1, 1)
-  
-Egammafile1 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Egamma_WOJ_fix_1.root")
-Egammafile2 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Egamma_WOJ_fix_2.root")
-Egammafile3 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_WOJ_fix_3.root")
-
-Muonfile1 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_WOJ_fix_1.root")
-Muonfile2 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_WOJ_fix_2.root")
-Muonfile3 = ROOT.TFile("/data/etp/jwittkowski/outputfiles/histos_fake_Muons_WOJ_fix_3.root")
+Muonfile1 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_fake_Muons_bgTable_1.root")
+Muonfile2 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_fake_Muons_bgTable_2.root")
+Muonfile3 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_fake_Muons_bgTable_3.root")
+Muonfile4 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_fake_Muons_bgTable_4.root")
+Muonfile5 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_fake_Muons_bgTable_5.root")
+Muonfile6 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_fake_Muons_bgTable_6.root")
 
 
 fm = ROOT.TFileMerger(ROOT.kFALSE)
-fm.OutputFile("/data/etp/jwittkowski/outputfiles/histos_ZN_fakebg_WOJ_fix.root")
+fm.OutputFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_fake_bgTable.root")
 fm.AddFile(Egammafile1)
 fm.AddFile(Egammafile2)
 fm.AddFile(Egammafile3)
+fm.AddFile(Egammafile4)
+fm.AddFile(Egammafile5)
+fm.AddFile(Egammafile6)
 fm.AddFile(Muonfile1)
 fm.AddFile(Muonfile2)
 fm.AddFile(Muonfile3)
+fm.AddFile(Muonfile4)
+fm.AddFile(Muonfile5)
+fm.AddFile(Muonfile6)
 fm.PartialMerge()  
 
 Egammafile1.Close()
 Egammafile2.Close()
 Egammafile3.Close()
+Egammafile4.Close()
+Egammafile5.Close()
+Egammafile6.Close()
 Muonfile1.Close()
 Muonfile2.Close()
 Muonfile3.Close()
+Muonfile4.Close()
+Muonfile5.Close()
+Muonfile6.Close()
+
+
+ZPlusJetsfile1 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_ZPlusJetsNEW_bgTable_split1.root")
+ZPlusJetsfile2 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_ZPlusJetsNEW_bgTable_split2.root")
+ZPlusJetsfile3 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_ZPlusJetsNEW_bgTable_split3.root")
+ZPlusJetsfile4 = ROOT.TFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_ZPlusJetsNEW_bgTable_split4.root")
+
+
+fm = ROOT.TFileMerger(ROOT.kFALSE)
+fm.OutputFile("/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_ZPlusJetsNEW_bgTable.root")
+
+fm.AddFile(ZPlusJetsfile1)
+fm.AddFile(ZPlusJetsfile2)
+fm.AddFile(ZPlusJetsfile3)
+fm.AddFile(ZPlusJetsfile4)
+
+fm.PartialMerge()  
+
+ZPlusJetsfile1.Close()
+ZPlusJetsfile2.Close()
+ZPlusJetsfile3.Close()
+ZPlusJetsfile4.Close()
+
   
 print "finished!"

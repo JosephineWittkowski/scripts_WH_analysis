@@ -7,17 +7,19 @@ from gridCoord import getGridCoordinates, reqidByMc1Mn1
 
 #ROOT.gROOT.ProcessLine("gROOT->SetBatch()")
 
-name_of_bg_file = ["/data/etp/jwittkowski/outputfiles/histos_ZN_WW_WOFJ_fix.root", 
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_WWPlusJets_WOFJ_fix.root", 
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_ttbarWtop_WOFJ_fix.root",
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_ZPlusJets_WOFJ_fix.root", 
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_WZ_WOFJ_fix.root",  
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_ZZ_WOFJ_fix.root",  
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_fakebg_WOFJ_fix.root",
-		   "/data/etp/jwittkowski/outputfiles/histos_ZN_Higgs_WOFJ_fix.root"]
+name_of_bg_file = [
+  		    "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_ZPlusJetsNEW_bgTable.root", 
+		    "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_ttbarWtop_bgTable.root",
+		    "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_WZ_bgTable.root",
+		    "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_ZZ_bgTable.root",  
+		    "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_WW_bgTable.root", 
+		    "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_WWPlusJets_bgTable.root", 
+		    "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_Higgs_bgTable.root",
+		    "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_fake_bgTable.root"
+		   ]
 	
 
-name_of_SR = ["MM_SRSS1"]#, "EE_SRSS2", "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4",2 "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
+name_of_SR = ["EE_SRSS1"]#, "EE_SRSS2", "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4",2 "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
 #name_of_SR = ["EE_SRSS1"]#, "EE_SRSS2", "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4", "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
 mcid_of_grid_point = [177501, 177502, 177503, 177504, 177505, 177506, 177507, 177508, 177509, 177510, 177511, 177512, 177513, 177514, 177515, 177516, 177517, 177518, 177519, 177520, 177521, 177522, 177523, 177524, 177525, 177526, 177527]
 
@@ -44,38 +46,39 @@ rootfiles_sg = []
 for f in name_of_bg_file:
   rootfiles_bg.append(ROOT.TFile(f))
 
-name_of_signal_file = ["/data/etp/jwittkowski/outputfiles/histos_ZN_177501_WOFJ_fix.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177502_WOFJ_fix.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177503_WOFJ_fix.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177504_WOFJ_fix.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177505_WOFJ_fix.root", 		       
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177506_WOFJ_fix.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177507_WOFJ_fix.root", 		       
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177508_WOFJ_fix.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177509_WOFJ_fix.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177510_WOFJ_fix.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177511_WOFJ_fix.root", 		       
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177512_WOFJ_fix.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177513_WOFJ_fix.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177514_WOFJ_fix.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177515_WOFJ_fix.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177516_WOFJ_fix.root", 		       
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177517_WOFJ_fix.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177518_WOFJ_fix.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177519_WOFJ_fix.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177520_WOFJ_fix.root", 		       
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177521_WOFJ_fix.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177522_WOFJ_fix.root", 
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177523_WOFJ_fix.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177524_WOFJ_fix.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177525_WOFJ_fix.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177526_WOFJ_fix.root",
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177527_WOFJ_fix.root"
+name_of_signal_file = [
+		      "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177501_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177502_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177503_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177504_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177505_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177506_bgTable.root", 
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177507_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177508_bgTable.root", 
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177509_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177510_bgTable.root", 
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177511_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177512_bgTable.root", 
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177513_bgTable.root", 
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177514_bgTable.root", 
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177515_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177516_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177517_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177518_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177519_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177520_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177521_bgTable.root", 
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177522_bgTable.root", 
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177523_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177524_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177525_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177526_bgTable.root",
+		       "/data/etp3/jwittkow/analysis_SUSYTools_03_04/histos_ZN_177527_bgTable.root"
 		       ]
 for f in name_of_signal_file:
   rootfiles_sg.append(ROOT.TFile(f))
 
-for b in range(41, 63):  
+for b in range(42, 43):  
   #loop over signal regions:
   for i_s, s in enumerate(name_of_SR):
     ybinProj_list[i_s] = b
@@ -84,7 +87,7 @@ for b in range(41, 63):
     B = 0.
     #loop over bg rootfiles:
     for i_rf, rf in enumerate(rootfiles_bg):
-      
+      rf.Print()
       histoname = "h_mll_" + s
       bg_histo = rf.Get(histoname)
       nBinsX = bg_histo.GetNbinsX()
@@ -134,8 +137,9 @@ for b in range(41, 63):
     #make TCanvas, draw TGraph2D:  
     c1 = ROOT.TCanvas("c_"+ s,"c_"+ s, 600, 600)
     ROOT.gStyle.SetPalette(1); 
-    graph.SetTitle("Z_{N} " + s + " bin " +  str(ybinProj_list[i_s]))
-    graph.SetMaximum(1.6);
+    #graph.SetTitle("Z_{N} " + s + " bin " +  str(ybinProj_list[i_s]))
+    graph.SetTitle("")
+    #graph.SetMaximum(3.0);
     graph.Draw("COLZ")
     graph.GetYaxis().SetTitle("#tilde{#chi}_{1}^{0}");
     graph.GetXaxis().SetTitle("#tilde{#chi}_{1}^{#pm}/#tilde{#chi}_{2}^{0}");    
@@ -149,8 +153,9 @@ for b in range(41, 63):
       M += 1
     #end loop over grid points
       
-    c1.SaveAs("../pics/significance_Z_N_" + s + "_bin" + str(ybinProj_list[i_s]) + "_WOFJ_fix.pdf")    
-    #c1.SaveAs("../pics/grid_mcids_new2.pdf")    
+    #c1.SaveAs("../pics/significance_Z_N_" + s + "_bin" + str(ybinProj_list[i_s]) + "_PRcheck.pdf")    
+    #c1.SaveAs("../pics/grid_mcids_new2.pdf")  
+    #c1.SaveAs("/data/etp/jwittkowski/int_note_whss/figures/signalregions/EM/EM_1j_ZN.eps")
 
 
 for rf in rootfiles_bg:

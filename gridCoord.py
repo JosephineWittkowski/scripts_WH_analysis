@@ -274,87 +274,115 @@ def getGridCoordinates(mcid) :
   if mcid== 177501:
     xcoord = 130     
     ycoord =  0	
+    xsec = 4.2439701557
   if mcid== 177502:
     xcoord = 140     
     ycoord = 10	
+    xsec = 3.1979225874
   if mcid== 177503:
     xcoord = 150      
     ycoord = 0	
+    xsec = 2.4526928067
   if mcid== 177504:
     xcoord = 152.5   
     ycoord = 22.5	
+    xsec = 2.3024949431
   if mcid== 177505:
     xcoord = 162.5   
     ycoord = 12.5	
+    xsec = 1.8069593906
   if mcid== 177506:
     xcoord = 175     
     ycoord =  0	
+    xsec = 1.3526386917
   if mcid== 177507:
     xcoord = 165     
     ycoord = 35	
+    xsec = 1.7067664266
   if mcid== 177508:
     xcoord = 175     
     ycoord = 25	
+    xsec = 1.3526386917
   if mcid== 177509:
     xcoord = 187.5   
     ycoord = 12.5	
+    xsec = 1.0351453722
   if mcid== 177510:
     xcoord = 200      
     ycoord = 0	
+    xsec = 0.8022477627
   if mcid== 177511:
     xcoord = 177.5   
     ycoord = 47.5	
+    xsec = 1.2798982263
   if mcid== 177512:
     xcoord = 187.5   
     ycoord = 37.5	
+    xsec = 1.0351453722
   if mcid== 177513:
     xcoord = 200     
     ycoord = 25	
+    xsec = 0.8022477627
   if mcid== 177514:
     xcoord = 212.5   
     ycoord = 12.5	
+    xsec = 0.6294424236
   if mcid== 177515:
     xcoord = 225      
     ycoord = 0	
+    xsec = 0.5012571812
   if mcid== 177516:
     xcoord = 190     
     ycoord = 60	
+    xsec = 0.9834355116
   if mcid== 177517:
     xcoord = 200     
     ycoord = 50	
+    xsec = 0.802247762
   if mcid== 177518:
     xcoord = 212.5   
     ycoord = 37.5	
+    xsec = 0.6294424236
   if mcid== 177519:
     xcoord = 225     
     ycoord = 25	
+    xsec = 0.5012571812
   if mcid== 177520:
     xcoord = 237.5   
     ycoord = 12.5	
+    xsec = 0.4004180953
   if mcid== 177521:
     xcoord = 250      
     ycoord = 0	
+    xsec = 0.3232687637
   if mcid== 177522:
     xcoord = 202.5   
     ycoord = 72.5	
+    xsec = 0.7630156279
   if mcid== 177523:
     xcoord = 212.5   
     ycoord = 62.5	
+    xsec = 0.6294424236
   if mcid== 177524:
     xcoord = 225     
     ycoord = 50	
+    xsec = 0.5012571812
   if mcid== 177525:
     xcoord = 237.5   
     ycoord = 37.5	
+    xsec = 0.4004180953
   if mcid== 177526:
     xcoord = 250     
     ycoord = 25	
+    xsec = 0.3232687637
   if mcid== 177527:
     xcoord = 262.5   
     ycoord = 12.5	
+    xsec = 0.2637965977
   if mcid== 177528:
     xcoord = 275      
     ycoord = 0
+    xsec = 0.2168904692
 
 
   return xcoord, ycoord, xsec

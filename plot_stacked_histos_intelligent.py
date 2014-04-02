@@ -2,98 +2,86 @@
 import ROOT
 #import "RooStats/NumberCountingUtils.h"
 
-ROOT.gROOT.ProcessLine("gROOT->SetBatch()")
+#ROOT.gROOT.ProcessLine("gROOT->SetBatch()")
 
 name_of_bg_file = [
-		    "/data/etp/jwittkowski/outputfiles/histos_ZN_ZPlusJets_WOJ_fix.root", 
-		    "/data/etp/jwittkowski/outputfiles/histos_ZN_ttbarWtop_WOJ_fix.root",
-		    "/data/etp/jwittkowski/outputfiles/histos_ZN_WZ_WOJ_fix.root",  
-		    "/data/etp/jwittkowski/outputfiles/histos_ZN_ZZ_WOJ_fix.root",  
-		    "/data/etp/jwittkowski/outputfiles/histos_ZN_WW_WOJ_fix.root", 
-		    "/data/etp/jwittkowski/outputfiles/histos_ZN_WWPlusJets_WOJ_fix.root", 
-		    "/data/etp/jwittkowski/outputfiles/histos_ZN_Higgs_WOJ_fix.root",
-		    "/data/etp/jwittkowski/outputfiles/histos_ZN_fakebg_WOJ_fix.root"
+		    "/data/etp/jwittkowski/outputfiles/histos_ZN_ZPlusJets_tauWZCorr.root", 
+		    "/data/etp/jwittkowski/outputfiles/histos_ZN_ttbarWtop_tauWZCorr.root",
+		    "/data/etp/jwittkowski/outputfiles/histos_ZN_WZ_checkJetOR_neu.root",
+		    "/data/etp/jwittkowski/outputfiles/histos_ZN_ZZ_tauWZCorr.root",  
+		    "/data/etp/jwittkowski/outputfiles/histos_ZN_WW_tauWZCorr.root", 
+		    "/data/etp/jwittkowski/outputfiles/histos_ZN_WWPlusJets_tauWZCorr.root", 
+		    "/data/etp/jwittkowski/outputfiles/histos_ZN_Higgs_tauWZCorr.root",
+		    "/data/etp/jwittkowski/outputfiles/histos_ZN_fakebg_tauWZCorr.root"
 		    ]
 		
 name_of_signal_file = [
-		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177501_WOJ_fix.root"
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177502_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177503_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177504_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177505_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177506_WOJ_fix.root", 
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177507_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177508_WOJ_fix.root", 
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177509_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177510_WOJ_fix.root", 
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177511_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177512_WOJ_fix.root", 
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177513_WOJ_fix.root", 
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177514_WOJ_fix.root", 
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177515_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177516_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177517_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177518_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177519_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177520_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177521_WOJ_fix.root", 
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177522_WOJ_fix.root", 
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177523_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177524_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177525_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177526_WOJ_fix.root",
-		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177527_WOJ_fix.root"
+		       "/data/etp/jwittkowski/outputfiles/histos_ZN_177501_tauWZCorr.root"
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177502_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177503_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177504_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177505_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177506_tauWZCorr.root", 
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177507_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177508_tauWZCorr.root", 
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177509_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177510_tauWZCorr.root", 
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177511_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177512_tauWZCorr.root", 
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177513_tauWZCorr.root", 
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177514_tauWZCorr.root", 
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177515_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177516_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177517_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177518_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177519_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177520_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177521_tauWZCorr.root", 
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177522_tauWZCorr.root", 
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177523_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177524_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177525_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177526_tauWZCorr.root",
+		       #"/data/etp/jwittkowski/outputfiles/histos_ZN_177527_tauWZCorr.root"
 		       ]
 
 name_of_contributionLegend = ["Z+Jets", "ttbarW+t", "WZ", "ZZ", "WW", "WW+Jets", "Higgs", "fake"]		
 fillColors = [ROOT.kOrange-2, ROOT.kRed+1, ROOT.kSpring+1, ROOT.kGreen+3, ROOT.kBlue-2, ROOT.kAzure+8, ROOT.kYellow, ROOT.kGray+1]
 name_of_contribution = ["ZPlusJets", "ttbarWPlust", "WZ", "ZZ", "WW", "WWPlusJets", "Higgs", "fake"]
 
-name_of_variables = ["ICl0llost", "pTl0llost", "etal0llost", "ptcone30l0llost", "d0Sigl0llost", "z0SinThetal0llost", "ICl1llost", "pTl1llost", "etal1llost", "ptcone30l1llost", "d0Sigl1llost", "z0SinThetal1llost",  "Nleptons_lost", "ml0llost", "ml1llost", "mTl0llost", "mTl1llost",
+name_of_variables = [
+  #"h_failedSignalCriteria_l0_EE"
+  #"ml0ltauZcand", 
+  "pTl1"
+  #"pTl0lZcandSimple", "pTl1lZcandSimple"
+  #"ptcone30l0lZcandSimple", "etcone30l1lZcandSimple"
+  #"ml0lZcandIso", "ml1lZcandIso"
+  
 
-"ICl0lsoft", "pTl0lsoft", "etal0lsoft", "ptcone30l0lsoft", "d0Sigl0lsoft", "z0SinThetal0lsoft", "ICl1lsoft", "pTl1lsoft", "etal1lsoft", "ptcone30l1lsoft", "d0Sigl1lsoft", "z0SinThetal1lsoft",  "Nleptons_soft", "ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft",
+#"mT2J", "Mljj",
 
-"ICl0loverlap", "pTl0loverlap", "etal0loverlap", "ptcone30l0loverlap", "d0Sigl0loverlap", "z0SinThetal0loverlap", "ICl1loverlap", "pTl1loverlap", "etal1loverlap", "ptcone30l1loverlap", "d0Sigl1loverlap", "z0SinThetal1loverlap",  "Nleptons_overlap", "ml0loverlap", "ml1loverlap", "mTl0loverlap", "mTl1loverlap",
+#"ICl0lZcandSoft", "pTl0lZcandSoft", "etal0lZcandSoft", "ptcone30l0lZcandSoft", "d0Sigl0lZcandSoft", "z0SinThetal0lZcandSoft", "ICl1lZcandSoft", "pTl1lZcandSoft", "etal1lZcandSoft", "ptcone30l1lZcandSoft","d0Sigl1lZcandSoft", "z0SinThetal1lZcandSoft",  
+#"Nleptons_ZcandSoft", 
+#"ml0lZcandSoft", "ml1lZcandSoft", "mTl0lZcandSoft", "mTl1lZcandSoft",
+#"etcone30l1lSoft", "etcone30l1lsoft", "etcone30l1loverlap", "etcone30l1loverlapWJet", "etcone30l1loverlapWOFLepton", "etcone30l1loverlapWSFLepton", "etcone30l1lZcand",
+#"etcone30l1lZcandSimple"
+#"h_N_MuonToBeChecked_afterMllCut_MM"
 
-"ICl0loverlapWOFLepton", "pTl0loverlapWOFLepton", "etal0loverlapWOFLepton", "ptcone30l0loverlapWOFLepton", "d0Sigl0loverlapWOFLepton", "z0SinThetal0loverlapWOFLepton", "ICl1loverlapWOFLepton", "pTl1loverlapWOFLepton", "etal1loverlapWOFLepton", "ptcone30l1loverlapWOFLepton", "d0Sigl1loverlapWOFLepton", "z0SinThetal1loverlapWOFLepton",  "Nleptons_overlapWOFLepton", "ml0loverlapWOFLepton", "ml1loverlapWOFLepton", "mTl0loverlapWOFLepton", "mTl1loverlapWOFLepton",
 
-"ICl0loverlapWSFLepton", "pTl0loverlapWSFLepton", "etal0loverlapWSFLepton", "ptcone30l0loverlapWSFLepton", "d0Sigl0loverlapWSFLepton", "z0SinThetal0loverlapWSFLepton", "ICl1loverlapWSFLepton", "pTl1loverlapWSFLepton", "etal1loverlapWSFLepton", "ptcone30l1loverlapWSFLepton", "d0Sigl1loverlapWSFLepton", "z0SinThetal1loverlapWSFLepton",  "Nleptons_overlapWSFLepton", "ml0loverlapWSFLepton", "ml1loverlapWSFLepton", "mTl0loverlapWSFLepton", "mTl1loverlapWSFLepton",
-
-"ICl0loverlapWJet", "pTl0loverlapWJet", "etal0loverlapWJet", "ptcone30l0loverlapWJet", "d0Sigl0loverlapWJet", "z0SinThetal0loverlapWJet", "ICl1loverlapWJet", "pTl1loverlapWJet", "etal1loverlapWJet", "ptcone30l1loverlapWJet", "d0Sigl1loverlapWJet", "z0SinThetal1loverlapWJet",  "Nleptons_overlapWJet", "ml0loverlapWJet", "ml1loverlapWJet", "mTl0loverlapWJet", "mTl1loverlapWJet",
-
-"ICl0lZcand", "pTl0lZcand", "etal0lZcand", "ptcone30l0lZcand", "d0Sigl0lZcand", "z0SinThetal0lZcand", "ICl1lZcand", "pTl1lZcand", "etal1lZcand", "ptcone30l1lZcand","d0Sigl1lZcand", "z0SinThetal1lZcand",  "Nleptons_Zcand", "ml0lZcand", "ml1lZcand", "mTl0lZcand", "mTl1lZcand",
-
-#"mt2J", "mt2J0LepM", "Mljj",
-
-#"etcone30l1llost", "etcone30l1lsoft", "etcone30l1loverlap", "etcone30l1loverlapWJet", "etcone30l1loverlapWOFLepton", "etcone30l1loverlapWSFLepton", "etcone30l1lZcand",
-
-  #"ml0llost", "ml1llost", "mTl0llost", "mTl1llost", "DeltaRl0llost", "DeltaRl1llost", "DeltaRZl0llost", "DeltaRZl1llost", "DeltaEtaZl0llost", "mTllllost", "ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft", "DeltaRl0lsoft", "DeltaRl1lsoft", "DeltaRZl0lsoft", "DeltaRZl1lsoft", "DeltaEtaZl0lsoft", "DeltaEtaZl1lsoft","mTlllsoft", "ml0loverlap", "ml1loverlap", "mTl0loverlap", "mTl1loverlap", "DeltaRl0loverlap", "DeltaRl1loverlap", "DeltaRZl0loverlap", "DeltaRZl1loverlap", "DeltaEtaZl0loverlap", "DeltaEtaZl1loverlap","mTllloverlap", "ml0loverlapWJet", "ml1loverlapWJet", "mTl0loverlapWJet", "mTl1loverlapWJet", "DeltaRl0loverlapWJet", "DeltaRl1loverlapWJet", "DeltaRZl0loverlapWJet", "DeltaRZl1loverlapWJet", "DeltaEtaZl0loverlapWJet", "DeltaEtaZl1loverlapWJet", "mTllloverlapWJet", "ml0loverlapWLepton", "ml1loverlapWLepton", "mTl0loverlapWLepton", "mTl1loverlapWLepton", "DeltaRl0loverlapWLepton", "DeltaRl1loverlapWLepton", "DeltaRZl0loverlapWLepton", "DeltaRZl1loverlapWLepton", "DeltaEtaZl0loverlapWLepton", "DeltaEtaZl1loverlapWLepton", "mTllloverlapWLepton", "ml0loverlapWSFLepton", "ml1loverlapWSFLepton", "mTl0loverlapWSFLepton", "mTl1loverlapWSFLepton", "DeltaRl0loverlapWSFLepton", "DeltaRl1loverlapWSFLepton", "DeltaRZl0loverlapWSFLepton", "DeltaRZl1loverlapWSFLepton", "DeltaEtaZl0loverlapWSFLepton", "DeltaEtaZl1loverlapWSFLepton", "mTllloverlapWSFLepton", "ml0lMlll", "ml1lMlll", "mTl0lMlll", "mTl1lMlll", "DeltaRl0lMlll", "DeltaRl1lMlll", "mTlllMlll"
 ]
 
 
     
 #name_of_variables = ["pTl0", "pTl1", "pTj0", "pTj1", "mll", "METrel", "MET", "HT", "mWWt", "mTlmin", "meff", "mt2", "mjj", "DeltaPhiMETll", "DeltaPhill", "NBJets", "NFJets", "NCJets", "DeltaPhijj", "pTjj", "ptll", "DeltaPhiMETl0", "DeltaPhiMETl1", "DeltaPhiMETj0", "DeltaPhiMETj1", "DeltaPhiMETjj", "DeltaRjj", "etal0", "etal1", "etaj0", "etaj1", "mTl0MET", "mTl1MET", "DeltaPhilljj", "DeltaPhil0jj", "DeltaPhil1jj", "DeltaRlljj", "DeltaEtajj", "mTll", "mMETll", "DeltaYjj", "DeltaEtall"]#, "D0_recalc_l0", "D0_recalc_l1", "D0_branch_l0", "D0_branch_l1", "D0Signif_recalc_l0", "D0Signif_recalc_l1", "D0Signif_branch_l0", "D0Signif_branch_l1", "mZTT_coll", "mZTT_mmc", "Mljj", "mTlmax", "ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft", "DeltaRl0lsoft", "DeltaRl1lsoft", "mTlllsoft", "ml0loverlap", "ml1loverlap", "mTl0loverlap", "mTl1loverlap", "DeltaRl0loverlap", "DeltaRl1loverlap", "mTllloverlap", "ml0llost", "ml1llost", "mTl0llost", "mTl1llost", "DeltaRl0llost", "DeltaRl1llost", "mTllllost"]
 
-x_axis_title = ["ICl0llost", "pTl0llost", "etal0llost", "ptcone30l0llost", "d0Sigl0llost", "z0SinThetal0llost", "ICl1llost", "pTl1llost", "etal1llost", "ptcone30l1llost", "d0Sigl1llost", "z0SinThetal1llost",  "Nleptons_lost", "ml0llost", "ml1llost", "mTl0llost", "mTl1llost",
-
-"ICl0lsoft", "pTl0lsoft", "etal0lsoft", "ptcone30l0lsoft", "d0Sigl0lsoft", "z0SinThetal0lsoft", "ICl1lsoft", "pTl1lsoft", "etal1lsoft", "ptcone30l1lsoft", "d0Sigl1lsoft", "z0SinThetal1lsoft",  "Nleptons_soft", "ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft",
-
-"ICl0loverlap", "pTl0loverlap", "etal0loverlap", "ptcone30l0loverlap", "d0Sigl0loverlap", "z0SinThetal0loverlap", "ICl1loverlap", "pTl1loverlap", "etal1loverlap", "ptcone30l1loverlap", "d0Sigl1loverlap", "z0SinThetal1loverlap",  "Nleptons_overlap", "ml0loverlap", "ml1loverlap", "mTl0loverlap", "mTl1loverlap",
-
-"ICl0loverlapWOFLepton", "pTl0loverlapWOFLepton", "etal0loverlapWOFLepton", "ptcone30l0loverlapWOFLepton", "d0Sigl0loverlapWOFLepton", "z0SinThetal0loverlapWOFLepton", "ICl1loverlapWOFLepton", "pTl1loverlapWOFLepton", "etal1loverlapWOFLepton", "ptcone30l1loverlapWOFLepton", "d0Sigl1loverlapWOFLepton", "z0SinThetal1loverlapWOFLepton",  "Nleptons_overlapWOFLepton", "ml0loverlapWOFLepton", "ml1loverlapWOFLepton", "mTl0loverlapWOFLepton", "mTl1loverlapWOFLepton",
-
-"ICl0loverlapWSFLepton", "pTl0loverlapWSFLepton", "etal0loverlapWSFLepton", "ptcone30l0loverlapWSFLepton", "d0Sigl0loverlapWSFLepton", "z0SinThetal0loverlapWSFLepton", "ICl1loverlapWSFLepton", "pTl1loverlapWSFLepton", "etal1loverlapWSFLepton", "ptcone30l1loverlapWSFLepton", "d0Sigl1loverlapWSFLepton", "z0SinThetal1loverlapWSFLepton",  "Nleptons_overlapWSFLepton", "ml0loverlapWSFLepton", "ml1loverlapWSFLepton", "mTl0loverlapWSFLepton", "mTl1loverlapWSFLepton",
-
-"ICl0loverlapWJet", "pTl0loverlapWJet", "etal0loverlapWJet", "ptcone30l0loverlapWJet", "d0Sigl0loverlapWJet", "z0SinThetal0loverlapWJet", "ICl1loverlapWJet", "pTl1loverlapWJet", "etal1loverlapWJet", "ptcone30l1loverlapWJet", "d0Sigl1loverlapWJet", "z0SinThetal1loverlapWJet",  "Nleptons_overlapWJet", "ml0loverlapWJet", "ml1loverlapWJet", "mTl0loverlapWJet", "mTl1loverlapWJet",
-
-"ICl0lZcand", "pTl0lZcand", "etal0lZcand", "ptcone30l0lZcand", "d0Sigl0lZcand", "z0SinThetal0lZcand", "ICl1lZcand", "pTl1lZcand", "etal1lZcand", "ptcone30l1lZcand","d0Sigl1lZcand", "z0SinThetal1lZcand",  "Nleptons_Zcand", "ml0lZcand", "ml1lZcand", "mTl0lZcand", "mTl1lZcand",
-
-#"mt2J", "mt2J0LepM", "Mljj",
-
-#"etcone30l1llost", "etcone30l1lsoft", "etcone30l1loverlap", "etcone30l1loverlapWJet", "etcone30l1loverlapWOFLepton", "etcone30l1loverlapWSFLepton", "etcone30l1lZcand",
-  #"ml0llost", "ml1llost", "mTl0llost", "mTl1llost", "DeltaRl0llost", "DeltaRl1llost", "DeltaRZl0llost", "DeltaRZl1llost", "DeltaEtaZl0llost", "mTllllost", "ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft", "DeltaRl0lsoft", "DeltaRl1lsoft", "DeltaRZl0lsoft", "DeltaRZl1lsoft", "DeltaEtaZl0lsoft", "DeltaEtaZl1lsoft","mTlllsoft", "ml0loverlap", "ml1loverlap", "mTl0loverlap", "mTl1loverlap", "DeltaRl0loverlap", "DeltaRl1loverlap", "DeltaRZl0loverlap", "DeltaRZl1loverlap", "DeltaEtaZl0loverlap", "DeltaEtaZl1loverlap","mTllloverlap", "ml0loverlapWJet", "ml1loverlapWJet", "mTl0loverlapWJet", "mTl1loverlapWJet", "DeltaRl0loverlapWJet", "DeltaRl1loverlapWJet", "DeltaRZl0loverlapWJet", "DeltaRZl1loverlapWJet", "DeltaEtaZl0loverlapWJet", "DeltaEtaZl1loverlapWJet", "mTllloverlapWJet", "ml0loverlapWLepton", "ml1loverlapWLepton", "mTl0loverlapWLepton", "mTl1loverlapWLepton", "DeltaRl0loverlapWLepton", "DeltaRl1loverlapWLepton", "DeltaRZl0loverlapWLepton", "DeltaRZl1loverlapWLepton", "DeltaEtaZl0loverlapWLepton", "DeltaEtaZl1loverlapWLepton", "mTllloverlapWLepton", "ml0loverlapWSFLepton", "ml1loverlapWSFLepton", "mTl0loverlapWSFLepton", "mTl1loverlapWSFLepton", "DeltaRl0loverlapWSFLepton", "DeltaRl1loverlapWSFLepton", "DeltaRZl0loverlapWSFLepton", "DeltaRZl1loverlapWSFLepton", "DeltaEtaZl0loverlapWSFLepton", "DeltaEtaZl1loverlapWSFLepton", "mTllloverlapWSFLepton", "ml0lMlll", "ml1lMlll", "mTl0lMlll", "mTl1lMlll", "DeltaRl0lMlll", "DeltaRl1lMlll", "mTlllMlll"]
-#x_axis_title = ["p_{Tl0}","p_{Tl1}","p_{Tj0}","p_{Tj1}", "m_{ll}", "E_{T}^{miss, rel}", "E_{T}^{miss}", "H_{T}", "m_{TWW}", "min(m_{T}(l0, l1))", "m_{eff}", "m_{T2}", "m_{jj}", "#Delta#Phi(E_{T}^{miss}, ll)", "#Delta#Phi(l0,l1)", "NBJets", "NFJets", "NCJets", "#Delta#Phi(j0, j1)", "p_{T,jj}", "p_{T,ll}", "#Delta#Phi(E_{T}^{miss},l0)", "#Delta#Phi(E_{T}^{miss},l1)", "#Delta#Phi(E_{T}^{miss},j0)", "#Delta#Phi(E_{T}^{miss},j1)", "#Delta#Phi(E_{T}^{miss},jj)", "#DeltaR(j,j)", "#eta_{l0}", "#eta_{l1}", "#eta_{j0}", "#eta_{j1}", "m_{T}(l0, E_{T}^{miss})", "m_{T}(l1, E_{T}^{miss})", "#Delta#Phi(ll,jj)", "#Delta#Phi(l0,jj)", "#Delta#Phi(l1,jj)", "#DeltaR(ll,jj)", "#Delta#eta(j,j)", "m_{T,ll}", "m_{E_{T}^{miss},ll}", "#DeltaY(j,j)", "#Delta#eta(l0,l1)"]#,"d0 recalc l0", "d0 recalc l1", "d0 branch l0", "d0 branch l1", "d0/#sigmad0 recalc l0", "d0/#sigmad0 recalc l1", "d0/#sigmad0 branch l0", "d0/#sigmad0 branch l1", "m_{Z->#tau#tau} (coll)","m_{Z->#tau#tau} (mmc)", "M_{ljj}", "max(m_{T}(l0, l1))", "ml0lsoft", "ml1lsoft", "mTl0lsoft", "mTl1lsoft", "DeltaRl0lsoft", "DeltaRl1lsoft", "mTlllsoft", "ml0loverlap", "ml1loverlap", "mTl0loverlap", "mTl1loverlap", "DeltaRl0loverlap", "DeltaRl1loverlap", "mTllloverlap", "ml0llost", "ml1llost", "mTl0llost", "mTl1llost", "DeltaRl0llost", "DeltaRl1llost", "mTllllost"
+x_axis_title = [
+  #"h_failedSignalCriteria_l0_EE"
+  "pTl1"
+  #"pTl0lZcandSimple", "pTl1lZcandSimple"
+  #"ptcone30l0lZcandSimple", "etcone30l1lZcandSimple"
+  #"ml0lZcandIso", "ml1lZcandIso"
 ]
+#x_axis_title = ["p_{Tl0}","p_{Tl1}","p_{Tj0}","p_{Tj1}", "m_{ll}", "E_{T}^{miss, rel}", "E_{T}^{miss}", "H_{T}", "m_{TWW}", "min(m_{T}(l0, l1))", "m_{eff}", "m_{T2}", "m_{jj}", "#Delta#Phi(E_{T}^{miss}, ll)", "#Delta#Phi(l0,l1)", "NBJets", "NFJets", "NCJets", "#Delta#Phi(j0, j1)", "p_{T,jj}", "p_{T,ll}", "#Delta#Phi(E_{T}^{miss},l0)", "#Delta#Phi(E_{T}^{miss},l1)", "#Delta#Phi(E_{T}^{miss},j0)", "#Delta#Phi(E_{T}^{miss},j1)", "#Delta#Phi(E_{T}^{miss},jj)", "#DeltaR(j,j)", "#eta_{l0}", "#eta_{l1}", "#eta_{j0}", "#eta_{j1}", "m_{T}(l0, E_{T}^{miss})", "m_{T}(l1, E_{T}^{miss})", "#Delta#Phi(ll,jj)", "#Delta#Phi(l0,jj)", "#Delta#Phi(l1,jj)", "#DeltaR(ll,jj)", "#Delta#eta(j,j)", "m_{T,ll}", "m_{E_{T}^{miss},ll}", "#DeltaY(j,j)", "#Delta#eta(l0,l1)"]#,"d0 recalc l0", "d0 recalc l1", "d0 branch l0", "d0 branch l1", "d0/#sigmad0 recalc l0", "d0/#sigmad0 recalc l1", "d0/#sigmad0 branch l0", "d0/#sigmad0 branch l1", "m_{Z->#tau#tau} (coll)","m_{Z->#tau#tau} (mmc)", "M_{ljj}", "max(m_{T}(l0, l1))"]
 
 name_of_SR = ["MM_SRSS1"]#, "EE_SRSS2"]#, "MM_SRSS1", "MM_SRSS2", "MM_SRSS3", "MM_SRSS4", "EM_SRSS1", "EM_SRSS2", "EE_SROS1", "MM_SROS1", "EM_SROS1"]
 
@@ -116,63 +104,54 @@ for f in name_of_signal_file:
 #====================================================================================================================================================================
 print_numbers_contributions = 0
 if print_numbers_contributions:
-  print 'bg contribution & events processed & MMSRSS1 & MMSRSS2 & MMSRSS3\\\\'
+  print '\\begin{tabular}{ l c c c}'
+  print 'bg contribution & EESRSS1 & MMSRSS1 & EMSRSS1\\\\'
+  print '  & {\\tiny for $E_{T}^{miss,rel}>= 50\,$GeV} & {\\tiny for $m_{T}(WW) >= 100\,$GeV} & {\\tiny for $m_{T}(WW) >= 140\,$GeV}\\\\ '
   print "\hline  "
   sum_EE = 0
   sum_MM = 0
   sum_EM = 0
   sum_total = 0
   for i_rf, rf in enumerate(rootfiles_bg):  
-    bg_histo_EE = rf.Get("h_HT_MM_SRSS1")	
-    bg_histo_projected_EE = bg_histo_EE.ProjectionX("h_HT_MM_SRSS1" + name_of_contribution[i_rf], 46, 46)
+    bg_histo_EE = rf.Get("h_HT_EE_SRSS1")	
+    bg_histo_projected_EE = bg_histo_EE.ProjectionX("h_HT_EE_SRSS1" + name_of_contribution[i_rf], 32, 32)
     nbins = bg_histo_projected_EE.GetNbinsX()
-    bg_histo_MM = rf.Get("h_HT_MM_SRSS2")	
-    bg_histo_projected_MM = bg_histo_MM.ProjectionX("h_HT_MM_SRSS2" + name_of_contribution[i_rf], 45, 45)
-    bg_histo_EM = rf.Get("h_HT_MM_SRSS3")	
-    bg_histo_projected_EM = bg_histo_EM.ProjectionX("h_HT_MM_SRSS3" + name_of_contribution[i_rf], 46, 46)
+    bg_histo_MM = rf.Get("h_HT_MM_SRSS1")	
+    bg_histo_projected_MM = bg_histo_MM.ProjectionX("h_HT_MM_SRSS1" + name_of_contribution[i_rf], 31, 31)
+    bg_histo_EM = rf.Get("h_HT_EM_SRSS1")	
+    bg_histo_projected_EM = bg_histo_EM.ProjectionX("h_HT_EM_SRSS1" + name_of_contribution[i_rf], 30, 30)
     bg_histo_total = rf.Get("cutflow_MM")	
     sum_EE = sum_EE + bg_histo_projected_EE.Integral(0, nbins + 2)
     sum_MM = sum_MM + bg_histo_projected_MM.Integral(0, nbins + 2)
     sum_EM = sum_EM + bg_histo_projected_EM.Integral(0, nbins + 2)
     sum_total = sum_total + bg_histo_total.GetBinContent( 1)
-    print name_of_contributionLegend[i_rf], ": & ", round(bg_histo_total.GetBinContent( 1),2), " & ",round(bg_histo_projected_EE.Integral(0, nbins + 2),2), " & ", round(bg_histo_projected_MM.Integral(0, nbins + 2),2), " & ",round(bg_histo_projected_EM.Integral(0, nbins + 2),2), "\\\\"
+    print name_of_contributionLegend[i_rf], ": & ",round(bg_histo_projected_EE.Integral(0, nbins + 2),2), " & ", round(bg_histo_projected_MM.Integral(0, nbins + 2),2), " & ",round(bg_histo_projected_EM.Integral(0, nbins + 2),2), "\\\\"
   print "\hline"  
   print "\hline"  
-  print "Total &  ", round(sum_total, 2), " & ", round(sum_EE,2),  " & ", round(sum_MM,2),  " & ", round(sum_EM,2),  "\\\\"
+  print "Total &  ", round(sum_EE,2),  " & ", round(sum_MM,2),  " & ", round(sum_EM,2),  "\\\\"
 
-  print 'WH mass point & events processed & MMSRSS1 & MMSRSS2 & MMSRSS3\\\\'
+  print 'WH mass point & EESRSS1 & MMSRSS1 & EMSRSS1\\\\'
   print "\hline  "
   for i_g, rf in enumerate(rootfiles_gridpoints):  
-    bg_histo_EE = rf.Get("h_HT_MM_SRSS1")	
-    bg_histo_projected_EE = bg_histo_EE.ProjectionX("h_HT_MM_SRSS1" + mcid_of_grid_point[i_g], 27, 27)
+    bg_histo_EE = rf.Get("h_HT_EE_SRSS1")	
+    bg_histo_projected_EE = bg_histo_EE.ProjectionX("h_HT_EE_SRSS1" + mcid_of_grid_point[i_g], 32, 32)
     nbins = bg_histo_projected_EE.GetNbinsX()
     bg_histo_MM = rf.Get("h_HT_MM_SRSS1")	
-    bg_histo_projected_MM = bg_histo_MM.ProjectionX("h_HT_MM_SRSS1" + mcid_of_grid_point[i_g], 27, 27)
-    bg_histo_EM = rf.Get("h_HT_MM_SRSS1")	
-    bg_histo_projected_EM = bg_histo_EM.ProjectionX("h_HT_MM_SRSS1" + mcid_of_grid_point[i_g], 27, 27)
+    bg_histo_projected_MM = bg_histo_MM.ProjectionX("h_HT_MM_SRSS1" + mcid_of_grid_point[i_g], 31, 31)
+    bg_histo_EM = rf.Get("h_HT_EM_SRSS1")	
+    bg_histo_projected_EM = bg_histo_EM.ProjectionX("h_HT_EM_SRSS1" + mcid_of_grid_point[i_g], 30, 30)
     bg_histo_total = rf.Get("cutflow_MM")	
-    print mcid_of_grid_point[i_g], ": & ", round(bg_histo_total.GetBinContent( 1),2), " & ",round(bg_histo_projected_EE.Integral(0, nbins + 2),2), " & ", round(bg_histo_projected_MM.Integral(0, nbins + 2),2), " & ",round(bg_histo_projected_EM.Integral(0, nbins + 2),2), "\\\\"
+    print mcid_of_grid_point[i_g], ": & ",round(bg_histo_projected_EE.Integral(0, nbins + 2),2), " & ", round(bg_histo_projected_MM.Integral(0, nbins + 2),2), " & ",round(bg_histo_projected_EM.Integral(0, nbins + 2),2), "\\\\"
   print "\hline"  
+  print '\\end{tabular}'
 #====================================================================================================================================================================  
 #====================================================================================================================================================================
 
 #which bin will be used for projection:
-ybinProj_EE_SRSS1 = 27
-ybinProj_EE_SRSS2 = 38
+ybinProj_MM_SRSS1 = 52
 
-ybinProj_MM_SRSS1 = 27
-ybinProj_MM_SRSS2 = 45
-ybinProj_MM_SRSS3 = 46
-#ybinProj_MM_SRSS4 = 37
 
-ybinProj_EM_SRSS1 = 27
-ybinProj_EM_SRSS2 = 45
-
-#ybinProj_EE_SROS1 = 51
-#ybinProj_MM_SROS1 = 51
-#ybinProj_EM_SROS1 = 51
-
-ybinProj_list = [ybinProj_MM_SRSS1, ybinProj_MM_SRSS1, ybinProj_EM_SRSS1]
+ybinProj_list = [ybinProj_MM_SRSS1]
 #ybinProj_list = [ybinProj_EE_SRSS1, ybinProj_EE_SRSS2, ybinProj_MM_SRSS1, ybinProj_MM_SRSS2, ybinProj_MM_SRSS3, ybinProj_MM_SRSS4, ybinProj_EM_SRSS1, ybinProj_EM_SRSS2, ybinProj_EE_SROS1, ybinProj_MM_SROS1, ybinProj_EM_SROS1]
 
 #loop over variables:  
@@ -187,21 +166,31 @@ for i_v, v in enumerate(name_of_variables):
   for i_s, s in enumerate(name_of_SR):
     #histoname as defined in histos_ZN_tauveto.C
     histoname = "h_" + v + "_" + s
+    #histoname = "h_failedSignalCriteria_l0_EE"
     print "histoname ", histoname
     #define stack to add all bg samples:
     stack = ROOT.THStack("stack_" + v + "_" + s, "stack_" + v + "_" + s)
     #define corresponding leg_stack
-    leg_stack = ROOT.TLegend(0.7,0.55,0.85,0.89)
+    leg_stack = ROOT.TLegend(0.75,0.55,0.9,0.89)
     leg_stack.SetFillColor(0)
 
     #loop over TFiles for bg contributions:
     for i_rf, rf in enumerate(rootfiles_bg):	
       #get individual histo for each bg root file:
-      rf.Print()
+      #rf.Print()
+      
+      #bg_histo_1 = rf.Get("h_failedSignalCriteria_l1_EE")
+      #bg_histo.Print()
+      #projection of TH2F:
+      #bg_histo_projected_1 = bg_histo_1.ProjectionX(histoname + "_1_1D_" + name_of_contribution[i_rf]+"_1", ybinProj_list[i_s], ybinProj_list[i_s])
+      
       bg_histo = rf.Get(histoname)
       bg_histo.Print()
       #projection of TH2F:
       bg_histo_projected = bg_histo.ProjectionX(histoname + "_1D_" + name_of_contribution[i_rf], ybinProj_list[i_s], ybinProj_list[i_s])
+      #print "bg_histo_projected= ", bg_histo_projected.Print()
+      #bg_histo_projected.Add(bg_histo_projected_1)
+      #print "bg_histo_projected= ", bg_histo_projected.Print()
       
       #depending on bins of histo, do rebin:
       nbins = bg_histo.GetNbinsX()
@@ -223,6 +212,14 @@ for i_v, v in enumerate(name_of_variables):
 	first_bin = 0
 	last_bin = 1
 	binning = 50			
+      elif "etcone" in v:
+	first_bin = 0
+	last_bin = 1
+	binning = 100		
+      elif "failedSignalCriteria" in v:
+	first_bin = -0.5
+	last_bin = 14.5
+	binning = 15	
       else:
 	if nbins == 2 or nbins == 11:
 	  first_bin = -0.5
@@ -245,7 +242,7 @@ for i_v, v in enumerate(name_of_variables):
 	  binning = 25	  
 	if nbins == 100.:
 	  last_bin = 500.
-	  binning = 25
+	  binning = 100
 	if nbins == 200.:
 	  last_bin = 10.
 	  first_bin = -10.
@@ -263,6 +260,7 @@ for i_v, v in enumerate(name_of_variables):
       bg_histo_projected.SetMarkerColor(fillColors[i_rf])
       bg_histo_projected.SetFillStyle(1001) 
       bg_histo_projected.SetFillColor(fillColors[i_rf])
+      print "\item ", name_of_contribution[i_rf], round(bg_histo_projected.Integral(),1)
       
       leg_stack.AddEntry(bg_histo_projected,name_of_contributionLegend[i_rf],"F")
       #add projection of bg histo to stack for lower plot:
@@ -280,7 +278,7 @@ for i_v, v in enumerate(name_of_variables):
       ##end of loop over rootfiles_bg   
       #draw stack if it the last bg contribution:
       #if i_rf == 7:
-	#print "bin content ", h_sum_bg.GetBinContent(10)
+	#print "bin content ",h_sum_bg.GetBinContent(2) +  2* h_sum_bg.GetBinContent(3)
     #loop over signal grid point root files:
     for i_g, grid_point_file in enumerate(rootfiles_gridpoints):
       #for merged signal grid point: just draw histogram:	
@@ -290,11 +288,15 @@ for i_v, v in enumerate(name_of_variables):
       grid_point_file_histo_projected = grid_point_file_histo.ProjectionX(histoname + "_1D_signal_" + name_of_contribution[i_rf], ybinProj_list[i_s], ybinProj_list[i_s])
       #make sure to use the same binning:
       grid_point_file_histo_projected.Rebin(nbins/binning)
+      print "signal masspoint ", mcid_of_grid_point[i_s]
+      print "integral", round(grid_point_file_histo_projected.Integral(),1)
       
       #find a factor for scaling signal to make it visible:
       signal_max = grid_point_file_histo_projected.GetMaximum()
-      if signal_max == 0:
+      #print "signal_max", signal_max
+      if signal_max == 0.0:
 	scale_for_signal = 0
+	scale = 0
       else:
 	scale_for_signal = stack.GetMaximum()/signal_max/2
       if scale_for_signal > 100000.:
@@ -311,13 +313,15 @@ for i_v, v in enumerate(name_of_variables):
       
       #define TCanvas and TPads:
       c1 = ROOT.TCanvas("c_" + v + "_" + s + "_" + str(i_g), "c_" + v + "_" + s + "_" + str(i_g), 600, 600)
-      c1.SetLogy()
       pad1 = ROOT.TPad("pad1","pad1", 0.0, 0.0, 1.0, 0.85, 0, 0, 0)
       pad1.Draw()
-      pad1.SetLogy(1)
+      if (not "mT2J" in v) and (not "Mljj" in v):
+	c1.SetLogy()
+	pad1.SetLogy(1)
+      
       pad1.SetFillColor(ROOT.kWhite)
 
-      draw_pad2 = True
+      draw_pad2 = False
       if draw_pad2:
 	pad2 = ROOT.TPad("pad2","pad2", 0.0, 0.85, 1.0, 1.0, 0, 0)
 	pad2.Draw()
@@ -332,8 +336,22 @@ for i_v, v in enumerate(name_of_variables):
       stack.Draw("HIST")   
       stack.GetYaxis().SetTitle("Events / " + str((last_bin+0.0)/(binning+0.0)) + " units ")    
       stack.GetYaxis().SetTitleOffset(2.5)
-      stack.GetXaxis().SetTitle(x_axis_title[i_v]) 
+      if not "failedSignalCriteria" in v:
+	stack.GetXaxis().SetTitle(x_axis_title[i_v]) 
       stack.SetTitle(s + " bin " + str(ybinProj_list[i_s]) + " mcid " + mcid_of_grid_point[i_g] + " scaled by " + str(scale))
+      
+      if "failedSignalCriteria" in v:
+  	stack.GetXaxis().SetBinLabel(2,"N leptons");
+	stack.GetXaxis().SetBinLabel(3,"too soft");
+	stack.GetXaxis().SetBinLabel(4,"#eta too large");
+	stack.GetXaxis().SetBinLabel(5,"failed pTCone30 iso");
+	stack.GetXaxis().SetBinLabel(6,"failed eTCone30 iso");
+	stack.GetXaxis().SetBinLabel(7,"failed d0Significance");
+	stack.GetXaxis().SetBinLabel(8,"failed Z0Significance");
+	stack.GetXaxis().SetBinLabel(9,"failed medium quality");
+	stack.GetXaxis().SetBinLabel(10,"failed tight quality");
+	stack.GetXaxis().SetBinLabel(11,"failed OR or Mll cut");
+	stack.GetXaxis().SetBinLabel(12,"not Prompt");
       
       #draw signal in same TPad as stack:
       grid_point_file_histo_projected.SetLineColor(ROOT.kPink-2)
@@ -489,7 +507,7 @@ for i_v, v in enumerate(name_of_variables):
 
 	pad2.cd().Update()
 	#end draw_pad2      
-      c1.SaveAs("/data/etp/jwittkowski/pics/cumulative_pdf_" + v + "_" + s + "_" + mcid_of_grid_point[i_g] + "_bin" + str(ybinProj_list[i_s]) + "_WOJ_fix.pdf")
+      #c1.SaveAs("/data/etp/jwittkowski/pics/cumulative_pdf_" + v + "_" + s + "_" + mcid_of_grid_point[i_g] + "_bin" + str(ybinProj_list[i_s]) + "_tauWZCorr.pdf")
       #end loop over mass points
   #end loop over signal regions
 #end loop over variables
